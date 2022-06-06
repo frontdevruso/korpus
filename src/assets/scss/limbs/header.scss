@@ -1,0 +1,23 @@
+.header {
+    padding: 1.38vw 5.55vw 1.38vw 5.55vw;
+    border-bottom: 0.138vw solid #8D8D8B;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        
+        height: fit-content;
+    }
+
+    &__logo {
+        width: fit-content;
+        height: fit-content;
+
+        display: flex;
+
+        img {
+            width: 6.041VW;
+            height: 2.8472VW;
+        }
+    }
+}
