@@ -18,19 +18,30 @@
         max-height: 0.14vw;
         height: 100%;
 
-        transition: .5s var(--lines-anim) width;
+        transition: .5s var(--lines-anim) width, .5s var(--lines-anim) transform, .5s var(--lines-anim) top;
         margin-left: auto;
 
         background-color: #2C2C2A;
         position: absolute;
         right: 0;
-        top: 1.3194vw;
+        top: 0;
+        transform: translateY(1.3194vw);
 
         &.show { width: var(--lines-burger) }
 
         &:last-child {
-            top: 2.0138vw;
-            transition: .5s var(--lines-anim) width;
+            transform: translateY(2.0138vw);
+        }
+    }
+
+    &.isOpen {
+        span {
+            top: 0.451388vw;
+            transform: translateY(1.3194vw) rotate(36.71deg);
+
+            &:last-child {
+                transform: translateY(1.3194vw) rotate(-36.71deg);
+            }
         }
     }
 }

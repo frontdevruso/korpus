@@ -1,0 +1,47 @@
+.services {
+    display: flex;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__item {
+        border-bottom: 0.138vw solid #8D8D8B;
+        box-sizing: border-box;
+
+        padding:  2.22vw 0 3.88vw 5.55vw;
+
+        h2 {
+            font-weight: 400;
+            font-size: 6.25vw;
+            line-height: 115%;
+            letter-spacing: 0.02em;
+
+            overflow: hidden;
+            position: relative;
+
+            display: flex;
+            flex-direction: row;
+
+            span {
+                // cubic-bezier(.88,1.73,.13,.8)
+                transform: translateY(100%);
+                transition: .6s cubic-bezier(.04,1.38,.66,1) transform;
+
+                display: flex;
+                line-height: 100%;
+
+                &.show { transform: translateY(0) }
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.11vw;
+            line-height: 118.75%;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.lang-switcher {
+    margin: 0.2vw 0 0 2.0833vw;
+    display: flex;
+
+    button {
+        line-height: 100%;
+        font-weight: 400;
+        font-size: 1.11vw;
+
+        padding: 0;
+        background-color: transparent;
+
+        letter-spacing: 0.05em;
+        display: flex;
+    }
+}

@@ -13,6 +13,8 @@ body {
     min-width: 320px;
     overflow: auto;
     background-color: $mainGray;
+
+    &::-webkit-scrollbar { display: none }
 }
 
 .m-open {
@@ -44,3 +46,5 @@ body {
 @import "./limbs/footer.scss";
 
 @import "./blocks/burger.scss";
+@import "./blocks/lang-switcher.scss";
+@import "./blocks/services.scss";

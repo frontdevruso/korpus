@@ -10,9 +10,11 @@ function addClassOnEyeContact(elements, timeout) {
             });
         });
         
-        elements.forEach(element => {
-            observer.observe(element);
-        });
+        if (elements.length) {
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        } else { observer.observe(elements) }
     }
 }
 
