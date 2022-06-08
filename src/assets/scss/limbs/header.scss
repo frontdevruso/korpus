@@ -1,12 +1,14 @@
 .header {
-    padding: 1.38vw 2.0833vw 1.38vw 5.55vw;
+    padding: 0 2.0833vw 0 5.55vw;
     border-bottom: 0.138vw solid #8D8D8B;
-
+    
+    height: var(--header-height);
+    
     &__container {
         display: flex;
         align-items: center;
         
-        height: fit-content;
+        height: 100%;
     }
 
     &__logo {

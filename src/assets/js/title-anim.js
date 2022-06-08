@@ -25,7 +25,7 @@ function titleAnimation(allTitles) {
         title.innerHTML += template;
 
         title.querySelectorAll('span').forEach(function(char, index) {
-            addClassOnEyeContact(char, 200 * (index + 0.6));
+            addClassOnEyeContact(char, 100 * (index + 0.5));
         });
     });
 }

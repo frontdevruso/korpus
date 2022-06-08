@@ -10,8 +10,10 @@ body {
     font-family: 'SuisseIntl', sans-serif;
     font-weight: 400;
 
+    height: 100vh;
+    overflow: hidden;
+
     min-width: 320px;
-    overflow: auto;
     background-color: $mainGray;
 
     &::-webkit-scrollbar { display: none }
@@ -48,3 +50,4 @@ body {
 @import "./blocks/burger.scss";
 @import "./blocks/lang-switcher.scss";
 @import "./blocks/services.scss";
+@import "./blocks/switchbar.scss";

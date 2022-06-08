@@ -43,9 +43,13 @@ input:focus, textarea:focus, button:focus { outline: none }
 
 .page { 
     position: relative; 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
-    min-height: 700px;
+    display: flex;
+
+    height: calc(100% - var(--header-height));
+
     &::-webkit-scrollbar { display: none }
 }
 
