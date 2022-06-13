@@ -20,3 +20,4 @@ function addClassOnEyeContact(elements, timeout) {
 
 addClassOnEyeContact(document.querySelectorAll('.burger span:first-child'), 0);
 addClassOnEyeContact(document.querySelectorAll('.burger span:last-child'), 300);
+addClassOnEyeContact(document.querySelectorAll('.services__item-paragraph'), 0);

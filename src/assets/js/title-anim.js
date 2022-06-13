@@ -19,18 +19,19 @@ function addClassOnEyeContact(elements, timeout) {
 }
 
 function titleAnimation(allTitles) {
-    allTitles.forEach(function(title, index) {
-        const template = title.getAttribute('data-title').split('').map( (l,i) => `<span class="char${i + 1}">${l == ' ' ? '&nbsp;' : l}</span>` ).join('');
-        title.innerHTML = '';
-        title.innerHTML += template;
-
-        title.querySelectorAll('span').forEach(function(char, index) {
-            addClassOnEyeContact(char, 100 * (index + 0.5));
+    if (allTitles) {
+        allTitles.forEach(function(title, index) {
+            const template = title.getAttribute('data-title').split('').map( (l,i) => `<span class="char${i + 1}">${l == ' ' ? '&nbsp;' : l}</span>` ).join('');
+            title.innerHTML = '';
+            title.innerHTML += template;
+    
+            title.querySelectorAll('span').forEach(function(char, index) {
+                addClassOnEyeContact(char, 100 * (index + 0.5));
+            });
         });
-    });
+    }
 }
 
-if (document.querySelectorAll('.services__item h2')) {
-    const titles = document.querySelectorAll('.services__item h2');
-    titleAnimation(titles);
-}
+
+titleAnimation(document.querySelectorAll('.services__item h2'));
+titleAnimation(document.querySelectorAll('.menu__list-item h2'));

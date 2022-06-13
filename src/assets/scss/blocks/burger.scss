@@ -12,6 +12,7 @@
     padding: 0;
 
     margin-left: auto;
+    background-color: transparent;
 
     span {
         width: 0;
@@ -28,20 +29,14 @@
         transform: translateY(1.3194vw);
 
         &.show { width: var(--lines-burger) }
-
-        &:last-child {
-            transform: translateY(2.0138vw);
-        }
+        &:last-child { transform: translateY(2.0138vw) }
     }
 
     &.isOpen {
         span {
             top: 0.451388vw;
             transform: translateY(1.3194vw) rotate(36.71deg);
-
-            &:last-child {
-                transform: translateY(1.3194vw) rotate(-36.71deg);
-            }
+            &:last-child { transform: translateY(1.3194vw) rotate(-36.71deg) }
         }
     }
 }

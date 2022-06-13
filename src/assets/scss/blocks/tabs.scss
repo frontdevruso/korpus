@@ -1,0 +1,15 @@
+.first-tab {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    position: relative;
+    min-width: calc(100vw - var(--switchbar-width));
+
+    transition: 2.4s ease all;
+
+    &.hide {
+        width: 0;
+        min-width: 0;
+    }
+}

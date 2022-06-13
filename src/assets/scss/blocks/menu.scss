@@ -1,0 +1,90 @@
+.menu {
+    height: 0;
+    background-color: $mainGray;
+
+    width: 100%;
+    position: fixed;
+    top: var(--header-height);
+    z-index: 40;
+
+    overflow: hidden;
+    border-bottom: 0.138vw solid #8D8D8B;
+    
+    &.t-anim { transition: 1.5s ease all }
+    &.open { height: calc(100vh - var(--header-height)) }
+    &__container { height: 100% }
+
+    &__switchbar {
+        display: flex;
+        width: calc(var(--switchbar-width));
+        height: 100%;
+
+        border-left: 0.138vw solid #8D8D8B;
+        position: absolute;
+        box-sizing: border-box;
+        right: 0;top: 0;
+
+        background-color: $mainGray;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0 0 3.33vw 5.55vw;
+        transition: 1s cubic-bezier(.04,1.38,.66,1) transform;
+        &.hide { transform: translateY(200%) }
+
+        p {
+            margin-right: 15.972vw;
+
+            font-weight: 400;
+            font-size: 1.11vw;
+            line-height: 120%;
+        }
+    }
+
+    &__list {
+        width: 100%;
+
+        &-item {
+            border-bottom: 0.138vw solid #8D8D8B;
+            box-sizing: border-box;
+    
+            height: 14.652vw;
+            padding: 0 0 0 5.55vw;
+    
+            overflow: hidden;
+            user-select: none;
+
+            h2 {
+                font-weight: 400;
+                font-size: 6.25vw;
+                line-height: 115%;
+                letter-spacing: 0.02em;
+    
+                overflow: hidden;
+                position: relative;
+    
+                margin-top: 2.22vw;
+    
+                display: flex;
+                flex-direction: row;
+    
+                span {
+                    // cubic-bezier(.88,1.73,.13,.8)
+                    transform: translateY(100%);
+                    transition: .6s cubic-bezier(.04,1.38,.66,1) transform;
+    
+                    display: flex;
+                    line-height: 100%;
+    
+                    &.show { transform: translateY(0) }
+                }
+            }
+        }
+    }
+} 

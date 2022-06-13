@@ -3,6 +3,8 @@
     border-bottom: 0.138vw solid #8D8D8B;
     
     height: var(--header-height);
+    position: relative;
+    z-index: 50;
     
     &__container {
         display: flex;

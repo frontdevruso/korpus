@@ -41,6 +41,45 @@ input:focus, textarea:focus, button:focus { outline: none }
 
 .none { display: none !important }
 
+.scrollbar-track { display: none !important }
+
+.g-btn {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-top: 0.2vw;
+
+    span {
+        font-weight: 400;
+        font-size: 0.972vw;
+        line-height: 110%;
+
+        padding: .3vw 0.55vw 0;
+        display: flex;
+        text-align: center;
+
+        margin: auto 0;
+    }
+
+    &::after, &::before {
+        content: '';
+        display: block;
+        margin-left: auto;
+
+        font-weight: 500;
+        font-size: 1.38vw;
+        line-height: 1;
+    }
+
+    &::before {
+        content: '[';
+    }
+
+    &::after {
+        content: ']';
+    }
+}
+
 .page { 
     position: relative; 
     overflow-x: hidden;

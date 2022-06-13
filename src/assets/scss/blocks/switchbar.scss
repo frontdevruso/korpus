@@ -1,17 +1,57 @@
 .switchbar {
-    background-color: #1D1D1B;
+    background: #1D1D1B;
     color: white;
 
-    height: 100%;
-    width: var(--header-height);
+    height: calc(100vh - var(--header-height));
+    width: var(--switchbar-width);
+    min-width: var(--switchbar-width);
 
-    &__container {
+    box-sizing: border-box;
+    border-right: 0.138vw solid #1D1D1B;
+    border-left: 0.138vw solid #1D1D1B;
+    
+    position: relative;
+    z-index: 25;
+
+    &.active {
+        border-color: #8D8D8B;
+        background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
+
+        .switchbar__logo {
+            background-color: black;
+            svg {
+                fill: white;
+                stroke: white;
+            }
+        }
+    }
+
+    &:not(.disabled) {
+        &:hover {
+            border-color: #8D8D8B;
+            background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
+    
+            .switchbar__logo {
+                background-color: black;
+                svg {
+                    fill: white;
+                    stroke: white;
+                }
+            }
+        }
+    }
+
+
+    &__btn {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
+        width: 100%;
         height: 100%;
+        background-color: transparent;
+        padding: 0;
     }
 
     &__logo {
