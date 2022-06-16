@@ -16,6 +16,33 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+.g-title {
+    font-weight: 400;
+    font-size: 6.25vw;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    min-height: 6.25vw;
+
+    span {
+        // cubic-bezier(.88,1.73,.13,.8)
+        transform: translateY(100%);
+        transition: .6s cubic-bezier(.04,1.38,.66,1) transform;
+
+        display: flex;
+        line-height: 100%;
+        height: 100%;
+        min-height: fit-content;
+
+        &.show { transform: translateY(0) }
+    }
+}
+
 h4 { font-size: 1.4em }
 
 button {
@@ -80,6 +107,72 @@ input:focus, textarea:focus, button:focus { outline: none }
     }
 }
 
+.arrow-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.416vw 0;
+    position: relative;
+
+    span {
+        font-weight: 400;
+        font-size: 1.11vw;
+        line-height: 120%;
+
+        width: 100%;
+        max-width: fit-content;
+        padding-right: 1.3888vw;
+    }
+
+    & > div {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+        svg {
+            width: 0.4861vw;
+            height: 0.7638vw;
+            margin-left: auto;
+        }
+        
+        &::after {
+            content: "";
+            display: block;
+
+            position: absolute;
+            top: 49%;
+            right: 0.09vw;
+
+            transform: translateY(-50%);
+            transition: 3s ease;
+
+            width: 1.388vw;
+            height: 0.05vw;
+            background-color: black;
+        }
+    }
+
+    &:hover {
+        & > div {
+            &::after { width: 100% }
+        }
+    }
+}
+
+.fade-in-anim {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: 2.5s cubic-bezier(.04,1.38,.66,1) transform, 3s cubic-bezier(.04,1.38,.66,1) opacity;
+            
+    &.show {
+        transform: initial;
+        opacity: 1;
+    }
+}
+
 .page { 
     position: relative; 
     overflow-x: hidden;
@@ -90,6 +183,12 @@ input:focus, textarea:focus, button:focus { outline: none }
     height: calc(100% - var(--header-height));
 
     &::-webkit-scrollbar { display: none }
+}
+
+.certain-sizes {
+    width: 100%;
+    height: 100%;
+    min-width: calc(100vw - var(--switchbar-width));
 }
 
 .lozad--disabled {

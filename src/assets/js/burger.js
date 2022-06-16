@@ -7,6 +7,9 @@ if (document.querySelector('.burger')) {
         burger.disabled = true;
         switchbar.querySelector('.switchbar__btn').disabled = true;
         switchbar.classList.toggle('disabled');
+        if (switchbar.querySelector('.switchbar__btn').disabled === true) {
+            switchbar.querySelector('.switchbar__btn').disabled = false;
+        }
 
         menu.classList.toggle('t-anim');
         burger.classList.toggle('isOpen');

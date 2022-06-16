@@ -1,0 +1,45 @@
+.navigation-page {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+
+    padding-bottom: 2.22vw;
+    height: 1.11vw;
+
+    a {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+
+        span {
+            font-size: 1.11vw;
+            white-space: nowrap;
+            transition: .6s ease color;
+        }
+
+        svg {
+            width: 0.8333vw;
+            height: 0.7638vw;
+
+            margin-left: 1.11vw;
+            transition: .6s ease stroke;
+            stroke: black;
+        }
+
+        &:hover {
+            span { color: #ABAAA8 }
+            svg {stroke: #ABAAA8 }
+        }
+
+        &:not(:last-child) {
+            flex-direction: row-reverse;
+            margin-right: 2.222vw;
+
+            svg {
+                margin-left: initial;
+                margin-right: 1.11vw;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

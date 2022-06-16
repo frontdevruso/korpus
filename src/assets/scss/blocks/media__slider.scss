@@ -1,0 +1,42 @@
+.media__slider {
+    max-width: 36vw;
+    margin-left: 6.66vw !important;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            display: flex;
+            flex-direction: column;
+
+            &:not(:last-child) { margin-bottom: 2.777vw }
+            a {
+                font-weight: 400;
+                font-size: 1.11vw;
+                line-height: 120%;
+
+                color: #ABAAA8;
+                display: block;
+
+                text-transform: uppercase;
+                margin-bottom: 0.27vw;
+            }
+
+            h4 {
+                font-weight: 400;
+                font-size: 1.38vw;
+                line-height: 120%;
+
+                margin-bottom: 0.833vw;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 1.11vw;
+                line-height: 120%;
+                letter-spacing: 0.01em;
+            }
+        }
+    }
+}

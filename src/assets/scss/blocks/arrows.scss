@@ -1,0 +1,42 @@
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    &--media {
+        margin-bottom: 1.5277vw;
+    }
+
+    &-item {
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 1.111vw;
+            height: 1.111vw;
+
+            transition: .6s ease stroke, .6s ease transform;
+            stroke: black;
+        }
+
+        &:hover {
+            svg { transform: translateX(-0.2vw) }
+        }
+
+        &--next { transform: rotate(180deg) }
+    }    
+
+    .swiper-button-disabled, &-item:disabled {
+        svg { stroke: #ABAAA8 }
+        cursor: default;
+
+        &:hover {
+            svg { transform: initial }
+        }
+    }
+}

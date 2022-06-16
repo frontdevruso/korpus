@@ -33,5 +33,6 @@ function titleAnimation(allTitles) {
 }
 
 
-titleAnimation(document.querySelectorAll('.services__item h2'));
-titleAnimation(document.querySelectorAll('.menu__list-item h2'));
+titleAnimation(document.querySelectorAll('.services__item h1'));
+titleAnimation(document.querySelectorAll('.menu__list-item h1'));
+titleAnimation(document.querySelectorAll('.about h1'));

@@ -48,7 +48,7 @@
     }
 
     &__list {
-        width: 100%;
+        width: calc(100% - var(--switchbar-width));
 
         &-item {
             border-bottom: 0.138vw solid #8D8D8B;
@@ -60,29 +60,53 @@
             overflow: hidden;
             user-select: none;
 
-            h2 {
-                font-weight: 400;
-                font-size: 6.25vw;
-                line-height: 115%;
-                letter-spacing: 0.02em;
-    
-                overflow: hidden;
-                position: relative;
-    
-                margin-top: 2.22vw;
-    
+            display: flex;
+            justify-content: space-between;
+
+            main {
                 display: flex;
-                flex-direction: row;
-    
-                span {
-                    // cubic-bezier(.88,1.73,.13,.8)
-                    transform: translateY(100%);
-                    transition: .6s cubic-bezier(.04,1.38,.66,1) transform;
-    
+                width: fit-content;
+                height: 100%;
+
+                h1 {
+                    margin-top: 2.22vw;
+                    height: fit-content;
+                }
+            }
+
+            &-links {
+                display: flex;
+                justify-content: end;
+
+                width: 100%;
+                height: fit-content;
+
+                opacity: 0;
+                transition: 1s ease;
+                padding: 3.75vw 3.472vw 0 0;
+                
+                ul {
                     display: flex;
-                    line-height: 100%;
-    
-                    &.show { transform: translateY(0) }
+                    flex-direction: column;
+                    
+                    width: 100%;
+                    max-width: 22.916vw;
+                    height: fit-content;
+
+                    &:not(:last-child) { margin-right: 4.44vw }
+
+                    .arrow-link {
+                        border: 0.138vw solid #8D8D8B;
+                        border-right: none;border-left: none;
+
+                        &:not(:last-child) { border-bottom: none }
+                    }
+                }
+            }
+
+            &:hover {
+                .menu__list-item-links {
+                    opacity: 1;
                 }
             }
         }
