@@ -1,0 +1,116 @@
+.contact-form {
+    h4 {
+        font-weight: 400;
+        font-size: 1.388vw;
+        line-height: 120%;
+
+        text-transform: uppercase;
+        margin-bottom: 5vw;
+    }
+
+    &__wrapper-form {
+        & > *:not(:last-child) { margin-bottom: 1.666vw }
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2.0833vw;
+
+            margin-bottom: 1.666vw;
+        }
+    }
+
+    &-submit {
+        margin-left: auto;
+        transition: .4s ease;
+    }
+
+    &__container {
+        opacity: 0;
+        transition: .6s ease;
+
+        &.show { opacity: 1 }
+    }
+
+    &__thx {
+        display: flex;
+        flex-direction: column;
+
+        opacity: 0;
+        transition: .6s ease;
+        min-height: 31vw;
+
+        &.show { opacity: 1 }
+
+        h4 {
+            margin-bottom: 0.555vw;
+        }
+    }
+}
+
+.contact-form__wrapper-form-policy {
+    display: flex;
+    width: 100%;
+    
+    box-sizing: initial;
+    &:not(:last-child) { margin-bottom: 0.6944vw }
+    &:last-of-type { margin-bottom: 6vw }
+
+    input[type=checkbox] { display: none }
+
+    label {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        width: 100%;
+
+        p { 
+            font-size: 0.9722vw;
+            color: black;
+            line-height: 140%;
+
+            display: initial;
+            user-select: none;
+            cursor: pointer;
+            
+            transition: .4s;
+
+            a {
+                text-transform: uppercase;
+                transition: .4s;
+                color: #ABAAA8;
+
+                &:hover { text-decoration: underline }
+            }
+        }
+    }
+    
+    input[type=checkbox] + label:before {
+        content: "";
+        border: 0.138vw solid #8D8D8B;
+        display: inline-block;
+
+        max-width: 1.1805vw;
+        width: 100%;
+        height: 1.1805vw;
+
+        margin-right: 0.555vw;
+        box-sizing: border-box;
+        transition: .4s;
+        cursor: pointer;
+
+        background-size: 100% auto;
+        background-position: 20% 30%;
+        background-repeat: no-repeat;
+    }
+
+    &.policy-error {
+        p { color: #C3161C }
+        &::before { border-color: #C3161C }
+    }
+
+    input[type=checkbox]:checked + label::before {
+        background-image: url('./../images/svg/check-form.svg');
+        border-color: black;
+    }
+}

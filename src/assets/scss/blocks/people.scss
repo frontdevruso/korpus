@@ -1,0 +1,93 @@
+.people {
+    main {
+        padding-top: 4.44vw;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__content {
+        max-width: 39.8611vw;
+        display: flex;
+        flex-direction: column;
+        
+        & > * { margin-bottom: 0 }
+
+        p {
+            font-weight: 400;
+            font-size: 1.11vw;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+
+            margin-bottom: 2.222vw;
+
+            &:last-child { margin-bottom: 2.777vw }
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 1.11vw;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+
+            margin-bottom: 1.111vw;
+            &:last-child { margin-bottom: 0 }
+
+            a {
+                color: $cathedral;
+                text-transform: uppercase;
+
+                transition: .5s ease color;
+
+                &:hover {
+                    color: #191919;
+                }
+            }
+        }
+    }
+
+    &__quotes {
+        max-width: 37.7777vw;
+        width: 100%;
+
+        ul {
+            display: grid;
+            grid-gap: 2.222vw;
+            margin-top: 4.1666vw;
+            
+            li {
+                display: flex;
+                flex-direction: column;
+
+                p, span {
+                    font-weight: 400;
+                    font-size: 1.111vw;
+                    line-height: 120%;
+                }
+
+                p {
+                    margin-bottom: 1.111vw;
+                }
+
+                span {
+                    margin-left: auto;
+                }
+
+                svg {
+                    width: 1.388vw;
+                    height: 1.111vw;
+
+                    margin-bottom: 0.555vw;
+
+                    &:last-child {
+                        transform: rotate(180deg);
+                        margin-top: 0.555vw;
+                        margin-bottom: 0;
+
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+}

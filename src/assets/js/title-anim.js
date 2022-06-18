@@ -1,4 +1,4 @@
-function addClassOnEyeContact(elements, timeout) {
+function addClassOnEyeContactTitle(elements, timeout) {
     if (elements) {        
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -26,7 +26,7 @@ function titleAnimation(allTitles) {
             title.innerHTML += template;
     
             title.querySelectorAll('span').forEach(function(char, index) {
-                addClassOnEyeContact(char, 100 * (index + 0.5));
+                addClassOnEyeContactTitle(char, 100 * (index + 0.5));
             });
         });
     }
@@ -36,3 +36,6 @@ function titleAnimation(allTitles) {
 titleAnimation(document.querySelectorAll('.services__item h1'));
 titleAnimation(document.querySelectorAll('.menu__list-item h1'));
 titleAnimation(document.querySelectorAll('.about h1'));
+titleAnimation(document.querySelectorAll('.contacts h1'));
+titleAnimation(document.querySelectorAll('.team h1'));
+titleAnimation(document.querySelectorAll('.people h1'));

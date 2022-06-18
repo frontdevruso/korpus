@@ -1,0 +1,94 @@
+.team {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            max-width: 37.777vw;
+            grid-gap: 1.111vw;
+
+            .g-btn {
+                margin-left: 0;
+                span { font-size: 0.833vw }
+                &::after, &::before { margin-left: 0 }
+                &.active { color: $cathedral }
+            }
+        }
+        
+    }
+
+    main {
+        padding-top: 4.44vw;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        max-width: 27.083vw;
+        height: fit-content;
+
+        .arrow-link {
+            border: 0.138vw solid #8D8D8B;
+            border-right: none;border-left: none;
+
+            &:not(:last-child) { border-bottom: none }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 37.777vw;
+        min-height: 39.861vw;
+
+        &-employees {
+            display: flex;
+            flex-direction: column;
+
+            opacity: 0;
+            transition: .6s ease;
+
+            &.show { opacity: 1 }
+
+            &-wrapper {
+                padding-top: 2.777vw;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1.111vw;
+
+                &-column {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    & > *:first-child { margin-top: 0 }
+                }
+                
+                p {
+                    font-weight: 400;
+                    font-size: 1.111vw;
+                    line-height: 120%;
+
+                    &:not(:last-of-type) { margin-bottom: 1.111vw }
+                }
+
+                img {
+                    width: 100%;
+                    height: fit-content;
+
+                    margin-top: 3.194vw;
+                }
+            }
+        }
+    }
+}

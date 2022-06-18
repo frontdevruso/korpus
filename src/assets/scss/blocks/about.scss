@@ -1,14 +1,6 @@
 .about {
     height: calc(100% - var(--header-height) / 2);
 
-    &__container {
-        padding: 2.22vw 3.33333vw 0 5.55vw;
-        display: flex;
-        flex-direction: column;
-
-        height: 100%;
-    }
-
     main {
         padding-top: 4.44vw;
         display: flex;
