@@ -1,4 +1,6 @@
 .team {
+    height: calc(100% - var(--header-height) / 2);
+
     &__heading {
         display: flex;
         align-items: center;
@@ -13,7 +15,10 @@
 
             .g-btn {
                 margin-left: 0;
-                span { font-size: 0.833vw }
+                span {
+                    font-size: 0.833vw;
+                    padding: .2vw 0.55vw 0;
+                }
                 &::after, &::before { margin-left: 0 }
                 &.active { color: $cathedral }
             }

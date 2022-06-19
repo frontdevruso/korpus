@@ -25,3 +25,4 @@ function switchingTabs(allTabsBtns, allTabs, tabsContent) {
 
 switchingTabs(document.querySelectorAll('.contacts [data-tab-btn]'), document.querySelectorAll('.contacts [data-tab]'), document.querySelector('.contacts__content'))
 switchingTabs(document.querySelectorAll('.team [data-tab-btn]'), document.querySelectorAll('.team [data-tab]'), document.querySelector('.team__content'));
+switchingTabs(document.querySelectorAll('.history [data-tab-btn]'), document.querySelectorAll('.history [data-tab]'), document.querySelector('.history__content'));

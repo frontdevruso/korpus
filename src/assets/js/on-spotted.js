@@ -44,6 +44,7 @@ addClassOnEyeContact(document.querySelectorAll('.services__item-paragraph'), 0);
 addClassOnEyeContact(document.querySelectorAll('.contact-form__thx'), 0);
 addClassOnEyeContact(document.querySelectorAll('.contacts__content-info, .contacts__content-community, .contacts__content-form, .contact-form__thx, .contact-form__container'), 0);
 addClassOnEyeContact(document.querySelectorAll('.team__content-employees'), 0);
+addClassOnEyeContact(document.querySelectorAll('.history__content-table'), 0);
 
 addClassOnEyeContactDelay(document.querySelectorAll('.fade-in-anim'), 100);
 addClassOnEyeContactDelay(document.querySelectorAll('.about__content-links ul a'), 200);

@@ -7,5 +7,6 @@ if (document.querySelector('.switchbar')) {
       switchbar.classList.toggle('active');
       firstTab.classList.toggle('hide');
       secondTab.classList.toggle('show');
+      document.querySelector('body').classList.toggle('purple-mood');
     });
 }

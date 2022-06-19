@@ -15,8 +15,30 @@ body {
 
     min-width: 320px;
     background-color: $mainGray;
+    position: relative;
 
     &::-webkit-scrollbar { display: none }
+    & > * { z-index: 5 }
+    &::after {
+        content: "";
+        display: block;
+
+        position: absolute;
+        top: 0;bottom: 0;
+        right: 0;left: 0;
+
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
+
+        z-index: 1;
+        transition: 2s ease;
+        opacity: 0;
+    }
+
+    &.purple-mood {
+        &::after { opacity: 1 }
+    }
 }
 
 .m-open {
@@ -62,3 +84,4 @@ body {
 @import "./blocks/contact-form.scss";
 @import "./blocks/team.scss";
 @import "./blocks/people.scss";
+@import "./blocks/history.scss";

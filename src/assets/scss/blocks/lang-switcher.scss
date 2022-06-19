@@ -1,16 +1,45 @@
 .lang-switcher {
     margin: 0.2vw 0 0 2.0833vw;
     display: flex;
+    align-items: center;
+    justify-content: center;
 
-    button {
+    width: 1.666vw;
+    height: 1.111vw;
+
+    position: relative;
+
+    &__btn {
         line-height: 100%;
         font-weight: 400;
         font-size: 1.11vw;
 
         padding: 0;
         background-color: transparent;
+        transition: .6s ease opacity;
 
+        text-transform: uppercase;
         letter-spacing: 0.05em;
         display: flex;
+
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+    }
+}
+
+[data-language-switcher="ru"] {
+    [data-language="en"] {
+        opacity: 1;
+        z-index: 5;
+        position: initial;
+    }
+}
+
+[data-language-switcher="en"] {
+    [data-language="ru"] {
+        opacity: 1;
+        z-index: 5;
+        position: initial;
     }
 }
