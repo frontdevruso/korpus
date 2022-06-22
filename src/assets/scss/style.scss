@@ -35,9 +35,15 @@ body {
         transition: 2s ease;
         opacity: 0;
     }
-
+ 
     &.purple-mood {
         &::after { opacity: 1 }
+    }
+
+    &.purple-always-mood {
+        &::after { opacity: 1 }
+        .menu { background-color: #E5D5EA }
+        .menu__switchbar { background-color: #E5D5EA }
     }
 }
 
@@ -85,3 +91,5 @@ body {
 @import "./blocks/team.scss";
 @import "./blocks/people.scss";
 @import "./blocks/history.scss";
+@import "./blocks/cookies.scss";
+@import "./blocks/switcher-checkbox.scss";

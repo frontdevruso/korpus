@@ -1,7 +1,8 @@
 .services {
     display: flex;
+    flex-direction: column;
+    
     height: 100%;
-
     transition: 2s ease transform;
 
     position: absolute;
@@ -23,6 +24,7 @@
 
         display: flex;
         flex-direction: column;
+        text-align: left;
 
         overflow: hidden;
         user-select: none;
@@ -35,16 +37,46 @@
         transition: cubic-bezier(.04,.88,.51,1) all;
         transition-duration: 2s;
         
-        main {
-            width: calc(100% - var(--switchbar-width));
+        &:disabled { color: inherit }
+
+        & > main {
+            width: 100%;
             height: fit-content;
 
             display: flex; 
             flex-direction: column;
             margin-top: auto;
 
-            padding: 0 0 3.88vw 0;
             position: relative;
+
+            header {
+                display: flex;
+                flex-direction: column;
+
+                padding: 0 0 4.7916vw 0;
+                cursor: pointer;
+
+                h1 { transition: .5s ease }
+            }
+        }
+
+        &.active {            
+            .services__item-content {
+                opacity: 1;
+                height: 40.416vw;
+            }
+
+            .services__item-content-links {
+                opacity: 1;
+            }
+
+            .services__item-content-products {
+                opacity: 1;
+            }
+            
+            .services__item-circle-title { 
+                &:hover { opacity: 0 }
+            }
         }
 
         .services__item-circle-title {
@@ -65,8 +97,146 @@
             opacity: 0;
         }
 
+        &-content {
+            height: 0;
+            opacity: 0;
+
+            transition: 2s ease height, 2s ease padding, .5s ease transform;
+            overflow: hidden;
+
+            padding: 0 3.333vw 0 0;
+
+            display: flex;
+            justify-content: space-between;
+
+            &-links {
+                display: flex;
+                flex-direction: column;
+                
+                width: 100%;
+                max-width: 34.722vw;
+                height: fit-content;
+
+                opacity: 0;
+                transition: 2s opacity;
+        
+                .arrow-link {
+                    border: 0.138vw solid #8D8D8B;
+                    border-right: none;border-left: none;
+        
+                    &:not(:last-child) { border-bottom: none }
+                }
+            }
+
+            &-products {
+                max-width: 37.8472vw;
+                width: 100%;
+
+                opacity: 0;
+                transition: 2s opacity;
+
+                &-items {
+                    display: flex;
+                    flex-direction: column;
+
+                    opacity: 0;
+                    transition: .6s ease;
+        
+                    &.show { opacity: 1 }
+                    
+                    & > *:last-child { margin-bottom: 0 }
+
+                    h3 {
+                        font-weight: 400;
+                        font-size: 1.59722vw;
+                        line-height: 130%;
+
+                        margin-bottom: 2.222vw;
+                    }
+
+                    p, span {
+                        font-weight: 400;
+                        font-size: 1.111vw;
+                        line-height: 144%;
+                    }
+
+                    p {
+                        &:not(:last-of-type) { margin-bottom: 1.111vw }
+                    }
+
+                    &-info {
+                        display: grid;
+                        grid-template-columns: 1fr 0.8fr;
+                        grid-gap: 3.3333vw;
+
+                        width: 100%;
+                        margin-bottom: 5vw;
+
+                        main {
+                            display: flex;
+                            flex-direction: column;
+
+                            & > *:last-child { margin-bottom: 0 }
+
+                            p {
+                                &:not(:last-of-type) { margin-bottom: 1.111vw }
+                            }
+                            
+                            a {
+                                padding: 0;
+                                display: flex;
+                                align-items: center;
+
+                                margin-top: auto;
+
+                                span { margin-right: 0.6944vw }
+                                svg {
+                                    max-width: 0.9722vw;
+                                    width: 100%;
+                                    height: 0.9722vw;
+
+                                    transition: .3s ease;
+                                    stroke: black;
+                                    fill: black;
+
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+
+                    &-tags {
+                        display: flex;
+                        align-items: center;
+
+                        flex-wrap: wrap;
+                        margin-bottom: 1.111vw;
+
+                        .g-btn {
+                            &:not(:last-child) { margin-right: 1.111vw }
+                            span {
+                                font-size: 0.833vw;
+                                padding: 0.2vw 0.55vw 0;
+                            }
+                            margin-top: 0;
+                            &.active { color: #ABAAA8 }
+                        }
+                    }
+
+                    &-scope {
+                        p {
+                            opacity: 0;
+                            transition: .6s ease;
+             
+                            &.show { opacity: 1 }
+                        }
+                    }
+                }
+            }
+        }
+
         &--cirlce-item {
-            &:hover {
+            &:not(.active):hover {
                 .services__item-circle-title { opacity: 1 }
             }
         }
@@ -77,9 +247,7 @@
             100% { transform: rotate(360deg) }
         }
         
-        h1 {
-            margin-top: 2.22vw;
-        }
+        h1 { margin-top: 2.22vw }
         
         &-paragraph {
             height: 1.3194vw;
@@ -99,5 +267,22 @@
             }
         }
 
+        &--ready {
+            height: fit-content;
+            position: relative;
+            top: initial;
+
+            transition: 3s ease;
+
+            main { margin-top: initial }
+            .services__item-content { opacity: 1 }
+
+            .services__item-circle-title {
+                bottom: initial;
+                position: absolute;
+
+                top: 1.73611vw;
+            }
+        }
     }
 }

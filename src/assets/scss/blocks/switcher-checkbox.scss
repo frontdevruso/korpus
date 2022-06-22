@@ -1,0 +1,33 @@
+
+.switcher-checkbox {
+    .switch { display: none }
+      
+    .switch + div {
+        width: 3.3333vw;
+        max-width: 3.3333vw;
+        height: var(--switcher-checkbox-height);
+        border-radius: 9999px;
+        background-color: transparent;
+        border: 0.06944vw solid black;
+        transition: background-color 200ms;
+        cursor: pointer;
+    }
+      
+    .switch + div > div {
+        width: var(--switcher-checkbox-height);
+        height: var(--switcher-checkbox-height);
+        border-radius: 100%;
+        background-color: black;
+        border: 0.06944vw solid black;
+        box-sizing: border-box;
+
+        transition: transform 250ms, background-color 250ms;
+        pointer-events: none;
+        transform: translateX(calc(100% + 0.1388vw));
+    }
+      
+    .switch:checked + div > div {
+        transform: translateX(calc(-0.06944vw));
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}

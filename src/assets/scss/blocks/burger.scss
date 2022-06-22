@@ -1,18 +1,26 @@
 :root {
     --lines-burger: 3.333vw;
     --lines-anim: ease;
+    
+    @media (max-width: 500px) {
+        --lines-burger: 6.4vw;
+    }
 }
 
 .burger {
     width: var(--lines-burger);
     height: var(--lines-burger);
-
+    
     display: flex;
     position: relative;
     padding: 0;
-
+    
     margin-left: auto;
     background-color: transparent;
+    
+    @media (max-width: 500px) {
+        height: 4.8vw;
+    }
 
     span {
         width: 0;
@@ -30,13 +38,25 @@
 
         &.show { width: var(--lines-burger) }
         &:last-child { transform: translateY(2.0138vw) }
+            
+        @media (max-width: 500px) {
+            max-height: 0.4vw;
+            transform: translateY(1.333vw);
+            &:last-child { transform: translateY(3vw) }
+        }
     }
-
+    
     &.isOpen {
         span {
             top: 0.451388vw;
             transform: translateY(1.3194vw) rotate(36.71deg);
             &:last-child { transform: translateY(1.3194vw) rotate(-36.71deg) }
+        }
+        
+        @media (max-width: 500px) {
+            span {
+                top: 0.9vw;
+            }
         }
     }
 }

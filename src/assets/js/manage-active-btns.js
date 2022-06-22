@@ -11,3 +11,9 @@ function manangeActiveBtns(allBtns) {
 
 manangeActiveBtns(document.querySelectorAll('.team__heading ul button'));
 manangeActiveBtns(document.querySelectorAll('.history__heading ul button'));
+manangeActiveBtns(document.querySelectorAll('.cookies__panel-btns button'));
+manangeActiveBtns(document.querySelectorAll('.cookies__panel-btns button'));
+
+document.querySelectorAll('.services__item-content-products-items-tags').forEach(function(btns) {
+    manangeActiveBtns(btns.querySelectorAll('button'));
+})

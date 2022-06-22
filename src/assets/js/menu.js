@@ -34,3 +34,28 @@ if (document.querySelector('.burger')) {
         }, 1500);
     });
 }
+
+function resizeMenuItem() {
+    if (document.querySelectorAll('.menu__list-item')) {
+        if(window.innerWidth <= 500) {
+            document.querySelectorAll('.menu__list-item').forEach(function(item) {
+                let itemHeight = Number((parseFloat((item.clientHeight) / window.innerWidth) * 100).toFixed(4));
+                
+                item.addEventListener('click', function() {
+                    let itemActiveHeight = item.querySelector('main').clientHeight;
+                    let itemActiveVwHeight = (parseFloat((itemActiveHeight) / window.innerWidth) * 100).toFixed(4);
+    
+                    if(item.classList.contains('active')) {
+                        item.classList.toggle('active');
+                        item.style.height = `${itemHeight}vw`;
+                    } else {
+                        item.classList.toggle('active');
+                        item.style.height = `${Number(itemActiveVwHeight) +  0.1388}vw`;
+                    }
+                });
+            });
+        }
+    }
+}
+
+resizeMenuItem();

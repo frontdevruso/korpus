@@ -1,10 +1,11 @@
+
 .first-tab {
     width: 100%;
     height: 100%;
 
     display: flex;
     position: relative;
-    min-width: calc(100vw - var(--switchbar-width));
+    // min-width: calc(100vw - var(--switchbar-width));
 
     transition: 2.4s ease all;
 
@@ -13,9 +14,112 @@
         min-width: 0;
     }
 
-    .scroll-content { height: 100% }
+    .scroll-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &--main {
+        .scroll-content { transition: .8s ease }
+    }
 }
 
 .second-tab {
     width: 0;
+    position: relative;
+    overflow: initial !important;
+
+    &__wrapper {
+        width: calc(100vw - var(--switchbar-width));
+        height: calc(100vh - var(--header-height));
+    }
+
+    &__container {
+        width: calc(100vw - var(--switchbar-width));
+        height: fit-content;
+
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+
+        padding: 2.222vw 4.7222vw 9.58333vw;
+
+        h1 {
+            width: fit-content;
+            margin: 0 0 9.0277vw;
+        }
+    }
+
+    &__table {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 3.125vw auto 17.6388vw auto;
+            
+            max-width: 15.0694vw;
+
+            .g-btn {
+                &::before, &::after {
+                    margin-left: initial;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+
+                margin: auto 0 auto;
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 1.5972vw;
+                line-height: 130%;
+
+                margin: 1.111vw 0 2.7083vw;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 1.111vw;
+                line-height: 140%;
+
+                overflow: hidden;
+                margin-bottom: 2vw;
+            }
+
+            &--1 {
+                img {
+                    width: 4.5138vw;
+                    height: 0.6944vw;
+                }
+            }
+
+            &--2 {
+                img {
+                    width: 5.625vw;
+                    height: 1.18055vw;
+                }
+            }
+
+            &--3 {
+                img {
+                    width: 10.833vw;
+                    height: auto;
+                }
+            }
+
+            &--4 {
+                img {
+                    width: 2.222vw;
+                    height: 1.31944vw;
+                }
+            }
+        }
+    }
 }

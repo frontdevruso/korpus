@@ -9,6 +9,13 @@
 
     position: relative;
 
+    @media (max-width: 500px) {
+        margin: 0 0 0 3.733vw;
+
+        width: 4.8vw;
+        height: 3.733vw;
+    }
+
     &__btn {
         line-height: 100%;
         font-weight: 400;
@@ -25,6 +32,10 @@
         opacity: 0;
         z-index: -1;
         position: absolute;
+
+        @media (max-width: 500px) {
+            font-size: 3.2vw;
+        }
     }
 }
 

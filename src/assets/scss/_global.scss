@@ -48,6 +48,16 @@ input:focus, textarea:focus, button:focus { outline: none }
 
 .none { display: none !important }
 
+.show__500px {
+    display: none !important;
+    @media (max-width: 500px) { display: inherit !important }
+}
+
+.hide__500px {
+    display: inherit !important;
+    @media (max-width: 500px) { display: none !important }
+}
+
 .scrollbar-track { display: none !important }
 
 .basic__container {
@@ -56,6 +66,10 @@ input:focus, textarea:focus, button:focus { outline: none }
     flex-direction: column;
 
     height: 100%;
+
+    @media (max-width: 500px) {
+        padding: 4.8vw 6.4vw 0;
+    }
 }
 
 .g-title {
@@ -71,6 +85,11 @@ input:focus, textarea:focus, button:focus { outline: none }
     display: flex;
     flex-direction: row;
     min-height: 6.25vw;
+
+    @media (max-width: 500px) {
+        font-size: 9.333vw;
+        min-height: 9.333vw;
+    }
 
     span {
         // cubic-bezier(.88,1.73,.13,.8)
@@ -106,10 +125,14 @@ input:focus, textarea:focus, button:focus { outline: none }
         text-align: center;
 
         margin: auto 0;
+
+        @media (max-width: 500px) {
+            font-size: 2.666vw;
+            padding: .6vw 1.6vw 0;
+        }
     }
     
     &:hover { color: $cathedral }
-
     &::after, &::before {
         content: '';
         display: block;
@@ -118,15 +141,13 @@ input:focus, textarea:focus, button:focus { outline: none }
         font-weight: 500;
         font-size: 1.38vw;
         line-height: 1;
-    }
 
-    &::before {
-        content: '[';
+        @media (max-width: 500px) {
+            font-size: 3.733vw;
+        }
     }
-
-    &::after {
-        content: ']';
-    }
+    &::before { content: '[' }
+    &::after { content: ']' }
 }
 
 .g-input {
@@ -166,6 +187,10 @@ input:focus, textarea:focus, button:focus { outline: none }
     padding: 0.416vw 0;
     position: relative;
     background-color: transparent;
+    
+    @media (max-width: 500px) {
+        padding: 2.666vw 0;
+    }
 
     span {
         font-weight: 400;
@@ -175,6 +200,11 @@ input:focus, textarea:focus, button:focus { outline: none }
         width: 100%;
         max-width: fit-content;
         padding-right: 1.3888vw;
+
+        @media (max-width: 500px) {
+            font-size: 4vw;
+            padding-right: 4vw;
+        }
     }
 
     & > div {
@@ -187,6 +217,11 @@ input:focus, textarea:focus, button:focus { outline: none }
             width: 0.4861vw;
             height: 0.7638vw;
             margin-left: auto;
+
+            @media (max-width: 500px) {
+                width: 2.933vw;
+                height: 2.666vw;
+            }
         }
         
         &::after {
@@ -203,6 +238,15 @@ input:focus, textarea:focus, button:focus { outline: none }
             width: 1vw;
             height: 0.05vw;
             background-color: black;
+
+            
+            @media (max-width: 500px) {
+                width: 2.1333vw;
+                height: 1px;
+
+                top: 50%;
+                right: 1.2vw;
+            }
         }
     }
 
@@ -243,7 +287,7 @@ input:focus, textarea:focus, button:focus { outline: none }
 
 .lozad--disabled {
     opacity: 0;
-    transition: .4s;
+    transition: .4s opacity;
 }
 
 .loaded { opacity: 1 }

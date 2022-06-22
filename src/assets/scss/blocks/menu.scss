@@ -11,8 +11,18 @@
     border-bottom: 0.138vw solid #8D8D8B;
     
     &.t-anim { transition: 1.5s ease all }
-    &.open { height: calc(100vh - var(--header-height)) }
-    &__container { height: 100% }
+    &.open { height: calc(100% - var(--header-height)) }
+    &__container {
+        height: 100%;
+        .scroll-content {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+        }
+    }
+
+    .scroll-content { transition: .4s ease }
 
     &__switchbar {
         display: flex;
@@ -28,15 +38,23 @@
     }
 
     &__footer {
-        position: absolute;
-        bottom: 0;
-
         display: flex;
         align-items: center;
+        width: calc(100% - var(--switchbar-width));
+        box-sizing: border-box;
 
+        margin-top: auto;
         padding: 0 0 3.33vw 5.55vw;
         transition: 1s cubic-bezier(.04,1.38,.66,1) transform;
         &.hide { transform: translateY(200%) }
+        
+        position: relative;
+        bottom: 0;
+
+        @media (max-width: 500px) {
+            justify-content: space-between;
+            padding: 8.5333vw 6.4vw 8.533vw;
+        }
 
         p {
             margin-right: 15.972vw;
@@ -44,6 +62,12 @@
             font-weight: 400;
             font-size: 1.11vw;
             line-height: 120%;
+
+            @media (max-width: 500px) {
+                font-size: 2.666vw;
+                margin-right: 0;
+                max-width: 34.66vw;
+            }
         }
     }
 
@@ -56,21 +80,47 @@
     
             height: 14.652vw;
             padding: 0 0 0 5.55vw;
-    
+            
             overflow: hidden;
             user-select: none;
-
+            
             display: flex;
             justify-content: space-between;
+            transition: 1s ease height;
+            
+            &.active {
+                @media (max-width: 500px) {
+                    .menu__list-item-links {
+                        opacity: 1;
+                        z-index: 5;
+                    }
+                }
+            }
+
+            @media (max-width: 500px) {
+                padding: 0 6.4vw 0;
+                flex-direction: column;
+                height: 38.933vw;
+            }
 
             main {
                 display: flex;
                 width: fit-content;
-                height: 100%;
+
+                width: 100%;
+                height: fit-content;
+                
+                @media (max-width: 500px) {
+                    flex-direction: column;
+                    padding-top: 4.8vw;
+                }
 
                 h1 {
                     margin-top: 2.22vw;
                     height: fit-content;
+                    width: 100%;
+                    
+                    @media (max-width: 500px) { margin-top: 0 }
                 }
             }
 
@@ -80,10 +130,19 @@
 
                 width: 100%;
                 height: fit-content;
+                box-sizing: border-box;
 
                 opacity: 0;
                 transition: 1s ease;
                 padding: 3.75vw 3.472vw 0 0;
+
+                @media (max-width: 500px) {
+                    justify-content: start;
+                    flex-direction: column;
+
+                    z-index: -1;
+                    padding: 8.533vw 0 23.466vw 0;
+                }
                 
                 ul {
                     display: flex;
@@ -95,6 +154,14 @@
 
                     &:not(:last-child) { margin-right: 4.44vw }
 
+                    @media (max-width: 500px) {
+                        max-width: none;
+                        &:not(:last-child) { margin-right: 0 }
+                        &:first-child {
+                            .arrow-link:last-child { border-bottom: none }
+                        }
+                    }
+
                     .arrow-link {
                         border: 0.138vw solid #8D8D8B;
                         border-right: none;border-left: none;
@@ -104,9 +171,9 @@
                 }
             }
 
-            &:hover {
-                .menu__list-item-links {
-                    opacity: 1;
+            @media (min-width: 500px) {
+                &:hover {
+                    .menu__list-item-links { opacity: 1 }
                 }
             }
         }

@@ -5,6 +5,10 @@
     height: var(--header-height);
     position: relative;
     z-index: 50;
+
+    @media (max-width: 500px) {
+        padding: 0 3.733vw 0 6.4vw;
+    }
     
     &__container {
         display: flex;
@@ -20,8 +24,13 @@
         display: flex;
 
         img {
-            width: 6.041VW;
-            height: 2.8472VW;
+            width: 6.041vw;
+            height: 2.8472vw;
+
+            @media (max-width: 500px) {
+                width: 16.8vw;
+                height: 7.7333vw;
+            }
         }
     }
 }

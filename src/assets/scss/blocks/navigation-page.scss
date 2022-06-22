@@ -6,15 +6,28 @@
     padding-bottom: 2.22vw;
     height: 1.11vw;
 
+    @media (max-width: 500px) {
+        padding: 14.93vw 0 8.5333vw;
+        height: 5.33vw;
+    }
+
     a {
         display: flex;
         align-items: center;
         width: fit-content;
+        
+        @media (max-width: 500px) {
+            &:last-child { margin-left: auto }
+        }
 
         span {
             font-size: 1.11vw;
             white-space: nowrap;
             transition: .6s ease color;
+
+            @media (max-width: 500px) {
+                font-size: 4vw;
+            }
         }
 
         svg {
@@ -24,6 +37,11 @@
             margin-left: 1.11vw;
             transition: .6s ease stroke;
             stroke: black;
+
+            @media (max-width: 500px) {
+                width: 3.2vw;
+                height: 2.666vw;
+            }
         }
 
         &:hover {

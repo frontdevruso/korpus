@@ -1,0 +1,127 @@
+.cookies {
+    height: fit-content;
+
+    &__container {
+        & > main {
+            p {
+                font-weight: 400;
+                font-size: 1.111vw;
+                line-height: 140%;
+            }
+    
+            h1 {
+                font-size: 2.777vw;
+                min-height: 2.777vw;
+            }
+        }
+    }
+
+    &__panel {
+        width: 100%;
+        max-width: 47.083vw;
+
+        margin-bottom: 6.944vw;
+
+        p {
+            font-weight: 400;
+            font-size: 1.111vw;
+            line-height: 120%;
+
+            margin-bottom: 2.222vw;
+        }
+
+        &-btns {
+            display: flex;
+            align-items: center;
+
+            button, a {
+                &:not(:last-child) { margin-right: 1.111vw }
+
+                &.active {
+                    color: #ABAAA8;
+                }
+            }
+        }
+    }
+
+    &__paragraph {
+        display: flex;
+        margin: 2.222vw 0 1.7361vw;
+        p {
+            max-width: 18.75vw;
+            &:not(:last-child) { margin-right: 3.333vw }
+        }
+    }
+
+    &__settings {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            max-width: 18.75vw;
+            width: 100%;
+
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1.11vw;
+
+                main {
+                    p, span {
+                        font-weight: 400;
+                        font-size: 1.111vw;
+                        line-height: 120%;
+                    }
+    
+                    p {
+                        margin-bottom: 0.4166vw
+                    }
+    
+                    button {
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+    
+                        span {
+                            margin-right: 0.6944vw;
+                        }
+    
+                        svg {
+                            max-width: 0.9722vw;
+                            width: 100%;
+                            height: 0.9722vw;
+
+                            transition: .3s ease;
+                            stroke: black;
+                            fill: black;
+    
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+
+            &.show {
+                .cookies__settings-item-content { opacity: 1 }
+                header {
+                    main {
+                        button {
+                            svg { transform: rotate(270deg) }
+                        }
+                    }
+                }
+            }
+
+            &-content {
+                min-height: 12.777vw;
+                transition: .6s ease opacity;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__save {
+        display: flex;
+    }
+}

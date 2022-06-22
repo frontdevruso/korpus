@@ -64,6 +64,10 @@
         padding: 0.9027vw 0.625vw 0.694vw 0.7638vw;
         width: fit-content;
         height: fit-content;
+
+        @media (max-width: 500px) {
+            padding: 2.1333vw 1.7vw 2.1333vw 1.9vw;
+        }
         
         svg {
             width: 1.11vw;
@@ -71,6 +75,11 @@
 
             fill: black;
             stroke: black;
+
+            @media (max-width: 500px) {
+                width: 2.1333vw;
+                height: 6.133vw;
+            }
         }
     }
 }

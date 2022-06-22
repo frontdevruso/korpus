@@ -7,6 +7,10 @@
 
     &--media {
         margin-bottom: 1.5277vw;
+
+        @media (max-width: 500px) {
+            margin-bottom: 7.466vw;
+        }
     }
 
     &-item {
@@ -22,6 +26,11 @@
 
             transition: .6s ease stroke, .6s ease transform;
             stroke: black;
+
+            @media (max-width: 500px) {
+                width: 4.266vw;
+                height: 4.266vw;
+            }
         }
 
         &:hover {
