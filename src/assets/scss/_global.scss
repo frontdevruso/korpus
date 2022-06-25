@@ -288,12 +288,8 @@ input:focus, textarea:focus, button:focus { outline: none }
 
     &--main {
         .first-tab {
-            & > .scroll-content {
-                height: fit-content;
-            }
-            .mobile-tab__container {
-                height: 100%;
-            }
+            & > .scroll-content { height: 100% }
+            .mobile-tab__container { height: 100% }
         }
     }
 }

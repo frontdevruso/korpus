@@ -25,17 +25,34 @@ function initializeMobileTabs(links) {
                     });
             
                     allTabBtns.forEach(function(btn) {
-                        btn.addEventListener('click', function() {
-                            let ordinalNumber = Number(btn.getAttribute('data-mobile-tab-btn'));
-                    
-                            burger.classList.toggle('burger--menu');
-                            burger.classList.toggle('burger--mobile-tab');
-                            burger.classList.toggle('isOpen');
-
-                            mobileTab.classList.toggle('open');
-            
-                            mobileSliderTab.slideTo(ordinalNumber - 1);
-                        })
+                        if(window.innerWidth <= 500) {
+                            btn.addEventListener('click', function() {
+                                let ordinalNumber = Number(btn.getAttribute('data-mobile-tab-btn'));
+                                
+                                burger.classList.toggle('burger--menu');
+                                burger.classList.toggle('burger--mobile-tab');
+                                burger.classList.toggle('isOpen');
+    
+                                mobileTab.classList.toggle('open');
+                                
+                                mobileSliderTab.slideTo(ordinalNumber - 1);
+                            })
+                        }
+                        window.addEventListener("resize", () => {
+                            if(window.innerWidth <= 500) {
+                                btn.addEventListener('click', function() {
+                                    let ordinalNumber = Number(btn.getAttribute('data-mobile-tab-btn'));
+                                    
+                                    burger.classList.toggle('burger--menu');
+                                    burger.classList.toggle('burger--mobile-tab');
+                                    burger.classList.toggle('isOpen');
+        
+                                    mobileTab.classList.toggle('open');
+                                    
+                                    mobileSliderTab.slideTo(ordinalNumber - 1);
+                                })
+                            }
+                        });
                     });
 
                     burger.addEventListener('click', function() {

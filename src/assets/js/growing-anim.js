@@ -16,6 +16,20 @@ function growingAnim(elements) {
                         item.style.removeProperty('transition');
                         item.classList.add('services__item--cirlce-item');
                         item.classList.remove('disabled');
+
+                        allElements.forEach(function(i) {
+                            i.style.height = ``;
+                            i.style.transitionDuration = `4s`;
+                            i.querySelector('.services__item-content').style.removeProperty('height');
+                            i.classList.add('services__item--ready');
+                            i.classList.remove('active');
+                        });
+
+                        document.querySelector('.services__cookies').classList.remove('none');
+                        setTimeout(function() {
+                            document.querySelector('.services__cookies').classList.add('show');
+                        }, 200);
+                        
                     }, 1000 * allElements.length);
                     setTimeout(function() {
                         item.querySelector('main').classList.remove('none');

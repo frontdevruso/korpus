@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     
-    height: fit-content;
+    height: 100%;
     transition: 2s ease;
 
     &__container {
@@ -374,6 +374,78 @@
                     opacity: 1;
                     top: 2vw;
                 }
+            }
+        }
+    }
+
+    &__cookies {
+        width: 100%;
+        height: 100%;
+        min-height: 13.0555vw;
+        
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        
+        @media (max-width: 500px) {
+            min-height: 54.400vw;
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+
+            transform: translateY(100%);
+            transition: 1.5s ease opacity, 1.1s ease transform;
+            opacity: 1;
+            
+            border-top: 0.138vw solid black;
+            border-bottom: 0.138vw solid black;
+
+            padding: 2.777vw 5.555vw 0;
+            box-sizing: border-box;
+            background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
+
+            @media (max-width: 500px) {
+                padding: 8.5333vw 6.4vw;
+                            
+                border-top: 0.266vw solid black;
+                border-bottom: 0.266vw solid black;
+            }
+                
+            p {
+                max-width: 47.083vw;
+                font-size: 1.1111vw;
+                line-height: 133%;
+    
+                margin-bottom: 2.222vw;
+
+                @media (max-width: 500px) {
+                    max-width: 64vw;
+                    font-size: 2.666vw;
+
+                    margin-bottom: 6.4vw;
+                }
+            }
+        }
+
+        &-btns {
+            display: flex;
+            .g-btn {
+                &:not(:last-child) { margin-right: 1.111vw }
+                &.active { color: #ABAAA8 }
+                @media (max-width: 500px) { &:not(:last-child) { margin-right: 4.2666vw } }
+            }
+                
+            @media (max-width: 500px) { margin-top: auto }
+        }
+
+        &.show {
+            .services__cookies-container {
+                transform: translateY(-0.1388vw);
+                @media (max-width: 500px) { transform: translateY(-0.533vw) }
             }
         }
     }
