@@ -21,7 +21,17 @@
             border: 0.138vw solid #8D8D8B;
             border-right: none;border-left: none;
 
+            span { white-space: nowrap }
             &:not(:last-child) { border-bottom: none }
+
+            @media (max-width: 500px) {
+                border: 0.2666vw solid black;
+                border-right: none;border-left: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            max-width: none;
         }
     }
 
@@ -31,6 +41,7 @@
         height: 100%;
 
         min-height: 35.555vw;
+        @media (max-width: 500px) { display: none }
 
         &-info {
             &-item {
@@ -40,29 +51,47 @@
                 &:not(:last-child) { margin-bottom: 2.77vw }
                 & > *:not(:first-child) { margin-bottom: 0.555vw }
                 & > *:last-child { margin-bottom: 0 }
-    
+
+                @media (max-width: 500px) {
+                    & > *:not(:first-child) { margin-bottom: 2.1333vw }
+                    &:not(:last-child) { margin-bottom: 10.666vw }
+                }
+                
                 h4 {
                     font-weight: 500;
                     font-size: 1.388vw;
                     line-height: 120%;
-    
+
                     text-transform: uppercase;
                     margin-bottom: 1.11vw;
+
+                    @media (max-width: 500px) {
+                        font-size: 6vw;
+                        margin-bottom: 2.1333vw;
+                    }
                 }
     
                 address {
                     font-weight: 400;
                     font-size: 1.111vw;
-                    line-height: 120%;
+                    line-height: 133%;
+
+                    @media (max-width: 500px) {
+                        font-size: 2.666vw;
+                    }
                 }
 
                 a {
                     font-weight: 400;
                     font-size: 1.111vw;
-                    line-height: 120%;
+                    line-height: 133%;
 
                     width: fit-content;
                     position: relative;
+
+                    @media (max-width: 500px) {
+                        font-size: 2.666vw;
+                    }
 
                     &::after {
                         content: "";
@@ -79,9 +108,7 @@
                     }
 
                     &:hover {
-                        &::after {
-                            width: 100%;
-                        }
+                        &::after { width: 100% }
                     }
                 }
             }
@@ -99,27 +126,59 @@
 
                 text-transform: uppercase;
                 margin-bottom: 5vw;
+
+                @media (max-width: 500px) {
+                    font-size: 6vw;
+                    margin-bottom: 2.1333vw;
+                    padding-right: 2vw;
+                    
+                    margin-bottom: 8.533vw;
+                }
             }
 
             p {
                 font-weight: 400;
                 font-size: 1.111vw;
-                line-height: 120%;
+                line-height: 133%;
+
+                @media (max-width: 500px) {
+                    font-size: 4vw;
+                }
             }
 
             &-wrapper {
                 display: flex;
+
+                @media (max-width: 500px) {
+                    flex-direction: column;
+                }
                 
                 & > p {
                     max-width: 19.166vw;
                     margin-right: 1.666vw;
+                    
+                    @media (max-width: 500px) {
+                        margin-right: 0;
+                        max-width: none;
+
+                        margin-bottom: 10.6666vw;
+                    }
                 }
 
                 &-list {
                     & > *:last-child { margin-bottom: 0 }
-                    p { margin-bottom: 1.111vw }
+                    p {
+                        margin-bottom: 1.111vw;
+                        @media (max-width: 500px) {
+                            margin-bottom: 4.2666vw;
+                        }
+                    }
                     ul {
                         margin-bottom: 2.9166vw;
+
+                        @media (max-width: 500px) {
+                            margin-bottom: 10.666vw
+                        }
 
                         li {
                             font-weight: 400;
@@ -141,6 +200,18 @@
 
                                 background-color: #8D8D8B;
                                 border-radius: 100%;
+                                
+                                @media (max-width: 500px) {
+                                    max-width: 1.0666vw;
+                                    height: 1.0666vw;
+
+                                    margin: 1.0666vw 2.133vw 0 0;
+                                    background-color: black;
+                                }
+                            }
+
+                            @media (max-width: 500px) {
+                                font-size: 2.6666vw;
                             }
                         }
                     }

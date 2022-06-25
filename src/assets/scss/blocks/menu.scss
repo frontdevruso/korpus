@@ -8,7 +8,11 @@
     z-index: 40;
 
     overflow: hidden;
-    border-bottom: 0.138vw solid #8D8D8B;
+    border-bottom: 0.138vw solid black;
+    
+    @media (max-width: 500px) {
+        border-bottom: 0.2666vw solid black;
+    }
     
     &.t-anim { transition: 1.5s ease all }
     &.open { height: calc(100% - var(--header-height)) }
@@ -29,12 +33,16 @@
         width: calc(var(--switchbar-width));
         height: 100%;
 
-        border-left: 0.138vw solid #8D8D8B;
+        border-left: 0.138vw solid black;
         position: absolute;
         box-sizing: border-box;
         right: 0;top: 0;
 
         background-color: $mainGray;
+
+        @media (max-width: 500px) {
+            border-bottom: 0.2666vw solid black;
+        }
     }
 
     &__footer {
@@ -75,10 +83,12 @@
         width: calc(100% - var(--switchbar-width));
 
         &-item {
-            border-bottom: 0.138vw solid #8D8D8B;
+            border-bottom: 0.138vw solid black;
             box-sizing: border-box;
     
             height: 14.652vw;
+            min-height: 14.652vw !important;
+            max-height: 14.652vw !important;
             padding: 0 0 0 5.55vw;
             
             overflow: hidden;
@@ -98,9 +108,14 @@
             }
 
             @media (max-width: 500px) {
-                padding: 0 6.4vw 0;
-                flex-direction: column;
                 height: 38.933vw;
+                padding: 0 6.4vw 0;
+
+                flex-direction: column;
+                min-height: 38.933vw !important;
+                max-height: none !important;
+
+                border-bottom: 0.2666vw solid black;
             }
 
             main {
@@ -163,10 +178,14 @@
                     }
 
                     .arrow-link {
-                        border: 0.138vw solid #8D8D8B;
+                        border: 0.138vw solid black;
                         border-right: none;border-left: none;
 
                         &:not(:last-child) { border-bottom: none }
+
+                        @media (max-width: 500px) {
+                            border-bottom: 0.2666vw solid black;
+                        }
                     }
                 }
             }

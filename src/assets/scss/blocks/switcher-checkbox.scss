@@ -1,21 +1,34 @@
 
 .switcher-checkbox {
+    height: fit-content;
+    display: flex;
     .switch { display: none }
       
     .switch + div {
         width: 3.3333vw;
         max-width: 3.3333vw;
-        height: var(--switcher-checkbox-height);
+        height: calc(var(--switcher-checkbox-height) - 0.06944vw);
+
         border-radius: 9999px;
         background-color: transparent;
         border: 0.06944vw solid black;
+        
         transition: background-color 200ms;
         cursor: pointer;
+
+        @media (max-width: 500px) {
+            width: 11.733vw;
+            max-width: 11.733vw;
+            height: calc(var(--switcher-checkbox-height));
+
+            border: 0.26666vw solid black;
+        }
     }
       
     .switch + div > div {
         width: var(--switcher-checkbox-height);
         height: var(--switcher-checkbox-height);
+
         border-radius: 100%;
         background-color: black;
         border: 0.06944vw solid black;
@@ -24,6 +37,11 @@
         transition: transform 250ms, background-color 250ms;
         pointer-events: none;
         transform: translateX(calc(100% + 0.1388vw));
+
+        @media (max-width: 500px) {
+            border: 0.26666vw solid black;
+            transform: translateX(calc(100% - 0.533vw));
+        }
     }
       
     .switch:checked + div > div {

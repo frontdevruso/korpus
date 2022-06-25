@@ -19,6 +19,13 @@
         @media (max-width: 500px) {
             &:last-child { margin-left: auto }
         }
+        
+        @media (max-width: 500px) {
+            &:first-child {
+                margin-right: auto;
+                margin-left: initial !important;
+            }
+        }
 
         span {
             font-size: 1.11vw;

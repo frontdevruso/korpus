@@ -5,6 +5,6 @@ if (document.querySelector('.media__slider')) {
         navigation: {
             nextEl: ".arrows-item-media--next",
             prevEl: ".arrows-item-media--prev",
-          },
+        },
     });
 }

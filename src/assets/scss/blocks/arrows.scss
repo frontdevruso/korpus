@@ -7,9 +7,25 @@
 
     &--media {
         margin-bottom: 1.5277vw;
+        @media (max-width: 500px) { margin-bottom: 7.466vw }
+    }
 
-        @media (max-width: 500px) {
-            margin-bottom: 7.466vw;
+    &--mobile-tab {
+        padding: 13.333vw 0 8.5333vw;
+
+        .arrows-item {
+            transition: .6s ease;
+
+            svg {
+                @media (max-width: 500px) {
+                    width: 9.866vw;
+                    height: 9.866vw;
+                }
+            }
+        }
+
+        .swiper-button-disabled, .arrows-item:disabled {
+            opacity: 0;
         }
     }
 

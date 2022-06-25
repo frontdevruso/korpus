@@ -39,7 +39,6 @@
         max-width: 41.66vw;
 
         & > *:last-child { margin-bottom: 0 }
-
         @media (max-width: 500px) { max-width: none }
 
         &:last-child {
@@ -175,13 +174,14 @@
                 display: flex;
 
                 picture {
-                    max-width: 68px;
+                    max-width: 4.722vw;
                     width: 100%;
 
                     margin: 0.5vw 1.11vw 0 0;
                     
                     @media (max-width: 500px) {
                         margin: 0.5vw 4.26666vw 0 0;
+                        max-width: 25.066vw;
                     }
 
                     img {

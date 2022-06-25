@@ -1,6 +1,6 @@
 .header {
     padding: 0 2.0833vw 0 5.55vw;
-    border-bottom: 0.138vw solid #8D8D8B;
+    border-bottom: 0.138vw solid black;
     
     height: var(--header-height);
     position: relative;
@@ -8,6 +8,7 @@
 
     @media (max-width: 500px) {
         padding: 0 3.733vw 0 6.4vw;
+        border-bottom: 0.266vw solid black;
     }
     
     &__container {

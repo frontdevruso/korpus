@@ -4,6 +4,12 @@
         display: flex;
         justify-content: space-between;
         height: 100%;
+
+        @media (max-width: 500px) {
+            padding-top: 8.5333vw;
+            flex-direction: column;
+            justify-content: start;
+        }
     }
 
     &__content {
@@ -22,6 +28,18 @@
             margin-bottom: 2.222vw;
 
             &:last-child { margin-bottom: 2.777vw }
+            
+            @media (max-width: 500px) {
+                font-size: 4.2666vw;
+                margin-bottom: 8.5333vw;
+
+                &:last-child { margin-bottom: 10.666vw }
+                max-width: none;
+            }
+        }
+                    
+        @media (max-width: 500px) {
+            max-width: none;
         }
 
         span {
@@ -32,6 +50,15 @@
 
             margin-bottom: 1.111vw;
             &:last-child { margin-bottom: 0 }
+
+            &.hide__500px {
+                display: initial !important;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 4.2666vw;
+                margin-bottom: 4.2666vw;
+            }
 
             a {
                 color: $cathedral;
@@ -50,10 +77,20 @@
         max-width: 37.7777vw;
         width: 100%;
 
+        @media (max-width: 500px) {
+            max-width: none;
+            margin-bottom: 14.933vw;
+        }
+
         ul {
             display: grid;
             grid-gap: 2.222vw;
             margin-top: 4.1666vw;
+            
+            @media (max-width: 500px) {
+                grid-gap: 2.133vw;
+                margin-top: 10.666vw;
+            }
             
             li {
                 display: flex;
@@ -63,10 +100,17 @@
                     font-weight: 400;
                     font-size: 1.111vw;
                     line-height: 120%;
+
+                    @media (max-width: 500px) {
+                        font-size: 4.2666vw;
+                    }
                 }
 
                 p {
                     margin-bottom: 1.111vw;
+                    @media (max-width: 500px) {
+                        margin-bottom: 4.2666vw;
+                    }
                 }
 
                 span {
@@ -79,12 +123,26 @@
 
                     margin-bottom: 0.555vw;
 
+                    @media (max-width: 500px) {
+                        width: 6.4vw;
+                        height: 4.8vw;
+
+                        margin-bottom: 3.2vw;
+                    }
+
                     &:last-child {
                         transform: rotate(180deg);
                         margin-top: 0.555vw;
                         margin-bottom: 0;
 
                         margin-left: auto;
+                        
+                        @media (max-width: 500px) {
+                            width: 6.4vw;
+                            height: 4.8vw;
+
+                            margin-top: 3.2vw;
+                        }
                     }
                 }
             }

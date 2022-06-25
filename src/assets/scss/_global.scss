@@ -22,6 +22,8 @@ h4 {
     line-height: 120%;
 
     text-transform: uppercase;
+
+    @media (max-width: 500px) { font-size: 6vw }
 }
 
 button {
@@ -125,6 +127,7 @@ input:focus, textarea:focus, button:focus { outline: none }
         text-align: center;
 
         margin: auto 0;
+        white-space: nowrap;
 
         @media (max-width: 500px) {
             font-size: 2.666vw;
@@ -170,6 +173,11 @@ input:focus, textarea:focus, button:focus { outline: none }
 
         &:focus {
             &::placeholder { opacity: 0 }
+        }
+        
+        @media (max-width: 500px) {
+            padding: 0 0 3.2vw;
+            font-size: 4vw;
         }
     }
 
@@ -277,6 +285,17 @@ input:focus, textarea:focus, button:focus { outline: none }
 
     height: calc(100% - var(--header-height));
     &::-webkit-scrollbar { display: none }
+
+    &--main {
+        .first-tab {
+            & > .scroll-content {
+                height: fit-content;
+            }
+            .mobile-tab__container {
+                height: 100%;
+            }
+        }
+    }
 }
 
 .certain-sizes {

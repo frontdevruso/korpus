@@ -14,8 +14,13 @@
     position: relative;
     z-index: 25;
 
+    @media (max-width: 500px) {
+        border-right: 0.266vw solid #1D1D1B;
+        border-left: 0.266vw solid #1D1D1B;
+    }
+
     &.active {
-        border-color: #8D8D8B;
+        border-color: black;
         background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
 
         .switchbar__logo {
@@ -29,7 +34,7 @@
 
     &:not(.disabled) {
         &:hover {
-            border-color: #8D8D8B;
+            border-color: black;
             background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
     
             .switchbar__logo {

@@ -4,7 +4,7 @@
     {{> head }}
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
-<body class="">
+<body class="full-h">
     
     {{> header }}
 
@@ -15,10 +15,74 @@
         <div class="first-tab">
 
             {{> body }}
-        
-            {{> footer }}
 
         </div>
+
+        <aside class="mobile-tab" data-mobile-tab-container="1">
+            <div class="mobile-tab__container">
+                <div class="mobile-tab__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="team__content-employees swiper-slide" data-mobile-tab="1">
+                            <h4>Artem Paleev</h4>
+                            <div class="team__content-employees-wrapper">
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Founder and Managing Partner of Korpus Prava. Has about 20 years of experience in managing Tax and Law Departments. </p>
+                                </div>
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Today, he is actively developing digital transformation in company, acting as a Product Owner of new digital products in the field of LegalTech, RegTech, FinTech.</p>
+                                    <p>Constantly improves his qualifications, and exchanges experience with colleagues at leading universities, such as Oxford, Harvard, Cambridge.</p>
+                                    <img class="lozad lozad--disabled" data-src="./assets/images/team-1.png" data-srcset="./assets/images/team-1@2x.png" alt="team">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__content-employees swiper-slide" data-mobile-tab="2">
+                            <h4>Maksim Gordeev</h4>
+                            <div class="team__content-employees-wrapper">
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Founder and Managing Partner of Korpus Prava. Has about 20 years of experience in managing Tax and Law Departments. </p>
+                                </div>
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Today, he is actively developing digital transformation in company, acting as a Product Owner of new digital products in the field of LegalTech, RegTech, FinTech.</p>
+                                    <p>Constantly improves his qualifications, and exchanges experience with colleagues at leading universities, such as Oxford, Harvard, Cambridge.</p>
+                                    <img class="lozad lozad--disabled" data-src="./assets/images/team-1.png" data-srcset="./assets/images/team-1@2x.png" alt="team">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__content-employees swiper-slide" data-mobile-tab="3">
+                            <h4>Nataly Malysheva</h4>
+                            <div class="team__content-employees-wrapper">
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Founder and Managing Partner of Korpus Prava. Has about 20 years of experience in managing Tax and Law Departments. </p>
+                                </div>
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Today, he is actively developing digital transformation in company, acting as a Product Owner of new digital products in the field of LegalTech, RegTech, FinTech.</p>
+                                    <p>Constantly improves his qualifications, and exchanges experience with colleagues at leading universities, such as Oxford, Harvard, Cambridge.</p>
+                                    <img class="lozad lozad--disabled" data-src="./assets/images/team-1.png" data-srcset="./assets/images/team-1@2x.png" alt="team">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__content-employees swiper-slide" data-mobile-tab="4">
+                            <h4>Ivan Ivanov</h4>
+                            <div class="team__content-employees-wrapper">
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Founder and Managing Partner of Korpus Prava. Has about 20 years of experience in managing Tax and Law Departments. </p>
+                                </div>
+                                <div class="team__content-employees-wrapper-column">
+                                    <p>Today, he is actively developing digital transformation in company, acting as a Product Owner of new digital products in the field of LegalTech, RegTech, FinTech.</p>
+                                    
+                                    <img class="lozad lozad--disabled" data-src="./assets/images/team-1.png" data-srcset="./assets/images/team-1@2x.png" alt="team">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="arrows arrows--mobile-tab">
+                    <button type="button" class="arrows-item arrows-item--prev arrows-item-mobile-tab--prev"><svg><use xlink:href="./assets/images/svg/sprite.svg#sliderLargeArrow"></use></svg></button>
+                    <button type="button" class="arrows-item arrows-item--next arrows-item-mobile-tab--next"><svg><use xlink:href="./assets/images/svg/sprite.svg#sliderLargeArrow"></use></svg></button>
+                </div>
+            </div>
+        </aside>
     
         {{> switchbar }}
 
@@ -28,10 +92,7 @@
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.js" integrity="sha512-s+Za9YjKdWb7RODdRba1tjg+6RqPPnB+c7mQywwtdvn59eZYNI53pLOsTp1M7dkznKcWw45tq6xAHh/i1kvL6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.2/imask.min.js" integrity="sha512-l0grYOI8XZga5TajPOiqLrQVCKrdh+k0QSEtS+cpJlNeI8Nu9GOhsVaFyFQuPQfYp02GnhsyHqkPR7P7BTKYAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 </html>

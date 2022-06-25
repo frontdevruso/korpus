@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
                 if (errCount === 0) {
                     // HERE YOU CAN ADD A AJAX REQUEST TO SEND DATA
-                    document.querySelector('.contact-form__container').classList.add('none');
-                    document.querySelector('.contact-form__thx').classList.remove('none');
+                    form.querySelector('.contact-form__container').classList.add('none');
+                    form.querySelector('.contact-form__thx').classList.remove('none');
                 }
             });
 

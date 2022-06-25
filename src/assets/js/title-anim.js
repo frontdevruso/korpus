@@ -21,6 +21,15 @@ function addClassOnEyeContactTitle(elements, timeout) {
 function titleAnimation(allTitles) {
     if (allTitles) {
         allTitles.forEach(function(title, index) {
+            if (window.innerWidth <= 500) {
+                title.querySelectorAll('span').forEach(function(word) {
+                    let wordContent = word.innerHTML;
+                    let template = wordContent.split('').map( (l,i) => `<span class="char${i + 1}">${l == ' ' ? '&nbsp;' : l}</span>` ).join('');
+                });
+            } else { 
+
+            }
+
             const template = title.getAttribute('data-title').split('').map( (l,i) => `<span class="char${i + 1}">${l == ' ' ? '&nbsp;' : l}</span>` ).join('');
             title.innerHTML = '';
             title.innerHTML += template;

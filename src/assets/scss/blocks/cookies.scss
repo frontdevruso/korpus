@@ -2,16 +2,31 @@
     height: fit-content;
 
     &__container {
+        padding-bottom: 3.333vw;
+        
+        @media (max-width: 500px) {
+            padding-bottom: 8.5333vw;
+        }
+
         & > main {
             p {
                 font-weight: 400;
                 font-size: 1.111vw;
                 line-height: 140%;
+
+                @media (max-width: 500px) {
+                    font-size: 2.666vw;
+                }
             }
     
             h1 {
                 font-size: 2.777vw;
                 min-height: 2.777vw;
+
+                @media (max-width: 500px) {
+                    font-size: 6vw;
+                    min-height: 6vw;
+                }
             }
         }
     }
@@ -22,12 +37,22 @@
 
         margin-bottom: 6.944vw;
 
+        @media (max-width: 500px) {
+            max-width: none;
+            margin-bottom: 26.666vw;
+        }
+
         p {
             font-weight: 400;
             font-size: 1.111vw;
-            line-height: 120%;
+            line-height: 140%;
 
             margin-bottom: 2.222vw;
+
+            @media (max-width: 500px) {
+                font-size: 2.666vw;
+                margin-bottom: 10.666vw;
+            }
         }
 
         &-btns {
@@ -36,9 +61,13 @@
 
             button, a {
                 &:not(:last-child) { margin-right: 1.111vw }
+                &.active { color: #ABAAA8 }
 
-                &.active {
-                    color: #ABAAA8;
+                @media (max-width: 500px) {
+                    &:not(:last-child) { margin-right: 4.2666vw }
+                    span {
+                        font-size: 2.66666vw;
+                    }
                 }
             }
         }
@@ -47,9 +76,19 @@
     &__paragraph {
         display: flex;
         margin: 2.222vw 0 1.7361vw;
+
+        @media (max-width: 500px) {
+            margin: 4.266vw 0 10.6666vw;
+        }
+
         p {
             max-width: 18.75vw;
             &:not(:last-child) { margin-right: 3.333vw }
+
+            @media (max-width: 500px) {
+                max-width: none;
+                &:not(:last-child) { margin-right: 6.4vw }
+            }
         }
     }
 
@@ -57,25 +96,47 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 500px) {
+            flex-direction: column;
+            justify-content: start;
+
+            margin-bottom: 19.2vw;
+        }
+
         &-item {
             max-width: 18.75vw;
             width: 100%;
 
+            @media (max-width: 500px) {
+                max-width: none;
+                &:not(:last-child) { margin-bottom: 6.4vw }
+            }
 
             header {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 1.11vw;
 
-                main {
+                @media (max-width: 500px) {
+                    margin-bottom: 0;
+                }
+
+                & > main {
                     p, span {
                         font-weight: 400;
                         font-size: 1.111vw;
                         line-height: 120%;
+
+                        @media (max-width: 500px) {
+                            font-size: 2.666vw;
+                        }
                     }
     
                     p {
-                        margin-bottom: 0.4166vw
+                        margin-bottom: 0.4166vw;
+                        @media (max-width: 500px) {
+                            margin-bottom: 0.533vw;
+                        }
                     }
     
                     button {
@@ -85,6 +146,9 @@
     
                         span {
                             margin-right: 0.6944vw;
+                            @media (max-width: 500px) {
+                                margin-right: 1.6vw;
+                            }
                         }
     
                         svg {
@@ -97,15 +161,23 @@
                             fill: black;
     
                             transform: rotate(180deg);
+
+                            @media (max-width: 500px) {
+                                max-width: 2.1333vw;
+                                height: 2.1333vw;
+                            }
                         }
                     }
                 }
             }
 
             &.show {
-                .cookies__settings-item-content { opacity: 1 }
+                .cookies__settings-item-content {
+                    opacity: 1;
+                    z-index: 15;
+                }
                 header {
-                    main {
+                    & > main {
                         button {
                             svg { transform: rotate(270deg) }
                         }
@@ -114,9 +186,26 @@
             }
 
             &-content {
-                min-height: 12.777vw;
-                transition: .6s ease opacity;
+                position: relative;
+                transition: .6s ease opacity, .6s ease height;
+
                 opacity: 0;
+                z-index: -1;
+
+                main {
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    
+                    @media (max-width: 500px) {
+                        padding: 4.2666vw 0 0 0;
+                    }
+                }
+
+                @media (max-width: 500px) {
+                    min-height: initial;
+                    height: 0;
+                }
             }
         }
     }

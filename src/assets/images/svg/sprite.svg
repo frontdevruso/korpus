@@ -67,4 +67,10 @@
         </g>
     </symbol>
 
+    <symbol viewBox="0 0 37 37" id="sliderLargeArrow">
+        <g xmlns="http://www.w3.org/2000/svg">
+            <path d="M37 19.8987V17.1013L5.39271 17.1013L17.5762 5.38103L15.529 3.5L6.68711e-07 18.5L15.529 33.5L17.5263 31.619L5.39271 19.8987L37 19.8987Z" fill="black"/>
+        </g>
+    </symbol>
+
 </svg>
