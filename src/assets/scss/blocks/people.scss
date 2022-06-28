@@ -1,9 +1,9 @@
 .people {
+    height: 100%;
     main {
         padding-top: 4.44vw;
         display: flex;
         justify-content: space-between;
-        height: 100%;
 
         @media (max-width: 500px) {
             padding-top: 8.5333vw;
@@ -50,10 +50,6 @@
 
             margin-bottom: 1.111vw;
             &:last-child { margin-bottom: 0 }
-
-            &.hide__500px {
-                display: initial !important;
-            }
 
             @media (max-width: 500px) {
                 font-size: 4.2666vw;

@@ -11,6 +11,7 @@ body {
     font-weight: 400;
 
     height: 100vh;
+    min-height: 100%;
     overflow: hidden;
 
     min-width: 320px;
@@ -38,12 +39,16 @@ body {
  
     &.purple-mood {
         &::after { opacity: 1 }
+        .header {
+            &::after { opacity: 1 }
+        }
     }
 
     &.purple-always-mood {
         &::after { opacity: 1 }
         .menu { background-color: #E5D5EA }
         .menu__switchbar { background-color: #E5D5EA }
+        .header { &::after { opacity: 1 } }
     }
 }
 

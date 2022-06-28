@@ -6,9 +6,28 @@
     position: relative;
     z-index: 50;
 
+    background-color: $mainGray;
+
     @media (max-width: 500px) {
         padding: 0 3.733vw 0 6.4vw;
         border-bottom: 0.266vw solid black;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+
+        position: absolute;
+        top: 0;bottom: 0;
+        right: 0;left: 0;
+
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
+
+        z-index: 1;
+        transition: 2s ease;
+        opacity: 0;
     }
     
     &__container {
@@ -16,6 +35,7 @@
         align-items: center;
         
         height: 100%;
+        & > * { z-index: 5 }
     }
 
     &__logo {

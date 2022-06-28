@@ -30,6 +30,8 @@
         span {
             font-size: 1.11vw;
             white-space: nowrap;
+
+            line-height: 100%;
             transition: .6s ease color;
 
             @media (max-width: 500px) {

@@ -24,6 +24,7 @@
     
         background-color: $mainGray;
         border: 0.1388vw solid #8D8D8B;
+        box-sizing: content-box;
         
         max-height: 0;
         width: 100%;
@@ -51,13 +52,13 @@
         }
 
         &.active {
-            max-height: 12.3em;
+            max-height: 13.8888vw;
             opacity: 1;
             overflow-y: scroll;
             z-index: 10;
 
             @media (max-width: 500px) {
-
+                max-height: 21vw;
             }
         }
 

@@ -5,9 +5,18 @@
 
     display: flex;
     position: relative;
+    overflow: hidden;
     // min-width: calc(100vw - var(--switchbar-width));
-
     transition: 2.4s ease all;
+    top: 0;
+
+    border-top: 0.138vw solid black;
+    padding-top: var(--header-height);
+    height: 100%;
+
+    box-sizing: border-box;
+
+    @media (max-width: 500px) { border-top: 0.2666vw solid black }
 
     &.hide {
         width: 0;
@@ -19,7 +28,7 @@
         flex-direction: column;
         height: 100%;
 
-        transition: .8s ease
+        transition: .8s ease;
     }
 }
 
@@ -27,6 +36,9 @@
     width: 0;
     position: relative;
     overflow: initial !important;
+
+    padding-top: var(--header-height);
+    height: 100%;
 
     .scroll-content {
         display: flex;

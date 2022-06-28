@@ -3,21 +3,24 @@
     background-color: $mainGray;
 
     width: 100%;
+    height: 0;
+
     position: fixed;
-    top: var(--header-height);
+    top: 0;
     z-index: 40;
 
     overflow: hidden;
     border-bottom: 0.138vw solid black;
+    box-sizing: border-box;
     
-    @media (max-width: 500px) {
-        border-bottom: 0.2666vw solid black;
-    }
+    @media (max-width: 500px) { border-bottom: 0.2666vw solid black }
     
     &.t-anim { transition: 1.5s ease all }
-    &.open { height: calc(100% - var(--header-height)) }
+    &.open { height: 100% }
     &__container {
-        height: 100%;
+        height: calc(100% - var(--header-height));
+        margin-top: var(--header-height);
+
         .scroll-content {
             display: flex;
             flex-direction: column;
@@ -33,16 +36,15 @@
         width: calc(var(--switchbar-width));
         height: 100%;
 
-        border-left: 0.138vw solid black;
-        position: absolute;
+        margin-top: var(--header-height);
         box-sizing: border-box;
+        border-left: 0.138vw solid black;
+        
+        position: absolute;
         right: 0;top: 0;
-
+        
         background-color: $mainGray;
-
-        @media (max-width: 500px) {
-            border-bottom: 0.2666vw solid black;
-        }
+        @media (max-width: 500px) { border-left: 0.2666vw solid black }
     }
 
     &__footer {

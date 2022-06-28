@@ -2,9 +2,11 @@
     background: #1D1D1B;
     color: white;
 
-    height: calc(100vh - var(--header-height));
+    height: calc(100% - var(--header-height));
     width: var(--switchbar-width);
     min-width: var(--switchbar-width);
+
+    margin-top: auto;
 
     box-sizing: border-box;
     border-right: 0.138vw solid #1D1D1B;
