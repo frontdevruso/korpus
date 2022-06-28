@@ -133,9 +133,7 @@
             display: flex;
             justify-content: space-between;
 
-            @media (max-width: 500px) {
-                padding: 0 6.4vw 0 6.4vw;
-            }
+            @media (max-width: 500px) { padding: 0 6.4vw 0 6.4vw }
 
             &-links {
                 display: flex;
@@ -160,6 +158,11 @@
                     border-right: none;border-left: none;
         
                     &:not(:last-child) { border-bottom: none }
+
+                    @media (max-width: 500px) {
+                        border: 0.2666vw solid #8D8D8B;
+                        border-right: none;border-left: none;
+                    }
                 }
             }
 
@@ -429,7 +432,7 @@
         }
 
         &.show {
-            .services__cookies-container { transform: translateY(-0.1388vw) }
+            .services__cookies-container { transform: translateY(0) }
         }
     }
 }
