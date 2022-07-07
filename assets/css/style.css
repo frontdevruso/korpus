@@ -1699,10 +1699,10 @@ input:focus, textarea:focus, button:focus {
     .about--awards main p:not(:last-of-type) {
       margin-bottom: 3.125vw; } }
   .about--awards .about__content {
-    margin-bottom: 14.933vw; }
+    margin-bottom: 4.1666vw; }
     @media (min-width: 1441px) {
       .about--awards .about__content {
-        margin-bottom: 11.197vw; } }
+        margin-bottom: 3.125vw; } }
     .about--awards .about__content p {
       margin-bottom: 6.4vw; }
       @media (min-width: 1441px) {
