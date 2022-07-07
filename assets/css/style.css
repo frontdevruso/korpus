@@ -5,7 +5,7 @@
   @media (min-width: 1441px) {
     :root {
       --header-height: 5.2083vw;
-      --switchbar-width: 5.2083vw;
+      --switchbar-width: 4.166vw;
       --switcher-checkbox-height: 1.25vw; } }
   @media (max-width: 500px) {
     :root {
@@ -255,7 +255,7 @@ input:focus, textarea:focus, button:focus {
       font-size: 9.333vw;
       min-height: 9.333vw; } }
   .g-title span {
-    transform: translateY(100%);
+    transform: translateY(95%);
     transition: 0.6s cubic-bezier(0.04, 1.38, 0.66, 1) transform;
     display: flex;
     line-height: 100%;
@@ -1030,7 +1030,13 @@ input:focus, textarea:focus, button:focus {
         .services__cookies-btns {
           margin-top: auto; } }
     .services__cookies.show .services__cookies-container {
-      transform: translateY(0); }
+      transform: translateY(-0.06944vw); }
+    @media (min-width: 1441px) {
+      .services__cookies.show .services__cookies-container {
+        transform: translateY(-0.05208vw); } }
+    @media (max-width: 500px) {
+      .services__cookies.show .services__cookies-container {
+        transform: translateY(-0.26666vw); } }
 
 .switchbar {
   background: #1D1D1B;
@@ -1355,6 +1361,17 @@ input:focus, textarea:focus, button:focus {
           font-size: 2.666vw;
           margin-right: 0;
           max-width: 34.66vw; } }
+    .menu__footer .g-btn {
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%); }
+      @media (max-width: 500px) {
+        .menu__footer .g-btn {
+          position: initial;
+          transform: initial;
+          top: initial;
+          bottom: initial; } }
   .menu__list {
     width: calc(100% - var(--switchbar-width)); }
     .menu__list-item {
@@ -1981,7 +1998,7 @@ input:focus, textarea:focus, button:focus {
     .navigation-page a span {
       font-size: 1.11vw;
       white-space: nowrap;
-      line-height: 100%;
+      line-height: 140%;
       transition: .6s ease color; }
       @media (min-width: 1441px) {
         .navigation-page a span {
@@ -2299,17 +2316,17 @@ input:focus, textarea:focus, button:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.0833vw;
-    margin-bottom: 0.555vw !important; }
+    margin-bottom: 1.666vw; }
     @media (min-width: 1441px) {
       .contact-form__wrapper-form header {
         grid-gap: 1.5625vw;
-        margin-bottom: 0.4166vw !important; } }
+        margin-bottom: 1.25vw; } }
     @media (max-width: 500px) {
       .contact-form__wrapper-form header {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 3.2vw;
-        margin-bottom: 0 !important; } }
+        margin-bottom: 3.2vw; } }
 
 .contact-form-submit {
   margin-left: auto;
@@ -3241,6 +3258,7 @@ input:focus, textarea:focus, button:focus {
         transform: translateX(calc(-0.052083vw)); } }
     @media (max-width: 500px) {
       .switcher-checkbox .switch + div > div {
+        background-color: black;
         border: 0.26666vw solid black;
         transform: translateX(calc(-0.533vw)); } }
   .switcher-checkbox .switch:checked + div > div {
