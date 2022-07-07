@@ -2,11 +2,19 @@
     // height: calc(100% - var(--header-height) / 2);
     height: 100%;
 
+    h1 {
+        @media (min-width: 1441px) {
+            font-size: 4.6875vw;
+            min-height: 4.6875vw;
+        }
+    }
+
     main {
         padding-top: 4.44vw;
         display: flex;
         justify-content: space-between;
-
+        
+        @media (min-width: 1441px) { padding-top: 3.75vw }
         @media (max-width: 500px) { flex-direction: column }
 
         p {
@@ -17,13 +25,30 @@
 
             overflow: hidden;
 
+            &.hide__500px, &.show__500px { display: initial }
+
             b {
                 text-transform: uppercase;
                 font-weight: 400;
                 color:#ABAAA8;
             }
 
+            a {
+                text-transform: uppercase;
+                font-weight: 400;
+                color:#ABAAA8;
+
+                transition: .6s ease;
+
+                &:hover { color: $shoeWax }
+            }
+
             &:not(:last-of-type) { margin-bottom: 2.777vw }
+
+            @media (min-width: 1441px) {
+                font-size: 0.83333vw;
+                &:not(:last-of-type) { margin-bottom: 2.0833vw }
+            }
 
             @media (max-width: 500px) {
                 font-size: 4vw;
@@ -39,11 +64,19 @@
         max-width: 41.66vw;
 
         & > *:last-child { margin-bottom: 0 }
-        @media (max-width: 500px) { max-width: none }
-
+        
         &:last-child {
             p { max-width: 50vw }   
         }
+        
+        @media (min-width: 1441px) {
+            max-width: 41.14vw;
+            &:last-child {
+                p { max-width: 37.5vw }   
+            }
+        }
+
+        @media (max-width: 500px) { max-width: none }
             
         &-links {
             display: flex;
@@ -51,13 +84,17 @@
             width: 25vw;
             
             margin-top: 1.8055vw;
+            @media (max-width: 500px) { width: initial }
 
-            @media (max-width: 500px) {
-                width: initial;
+            @media (min-width: 1441px) {
+                width: 18.75vw;
+                margin-top: 1.35416vw;
             }
 
             .arrow-link {
                 margin-right: 1.38vw;
+                @media (min-width: 1441px) { margin-right: 1.04166vw }
+
                 div {
                     &::after {
                         transition: initial;
@@ -68,6 +105,7 @@
 
             ul {
                 display: flex;
+
                 a {
                     display: flex;
                     width: 1.666vw;
@@ -75,6 +113,13 @@
 
                     overflow: hidden;
                     &:not(:last-child) { margin-right: 0.555vw }
+
+                    @media (min-width: 1441px) {
+                        width: 1.25vw;
+                        height: 1.25vw;
+
+                        &:not(:last-child) { margin-right: 0.416666vw }
+                    }
 
                     @media (max-width: 500px) {
                         width: 6.4vw;
@@ -90,6 +135,7 @@
                         transition: 2.5s cubic-bezier(.04,1.38,.66,1) transform, 4s cubic-bezier(.04,1.38,.66,1) opacity, .5s ease fill;
 
                         fill: black;
+                        @media (min-width: 1441px) { transform: translateY(1.25vw) }
                     }
 
                     &:hover {
@@ -112,6 +158,8 @@
         display: flex;
         flex-direction: column;
         
+        @media (min-width: 1441px) { max-width: 39.166vw }
+
         @media (max-width: 500px) {
             max-width: none;
             margin-bottom: 10.666vw;
@@ -123,6 +171,12 @@
             grid-gap: 5vw;
 
             &:not(:last-child) { margin-bottom: 2.77vw }
+
+            @media (min-width: 1441px) {
+                grid-gap: 2.0833vw;
+                grid-template-columns: 43% auto;
+                &:not(:last-child) { margin-bottom: 2.0833vw }
+            }
 
             @media (max-width: 500px) {
                 grid-template-columns: 1fr;
@@ -140,6 +194,10 @@
                 font-size: 1.388vw;
                 line-height: 110%;
 
+                @media (min-width: 1441px) {
+                    font-size: 1.04166vw;
+                }
+
                 @media (max-width: 500px) { font-size: 6vw }
             }
 
@@ -152,9 +210,11 @@
     &__awards {
         padding-left: 6.944vw;
 
-        @media (max-width: 500px) {
-            padding-left: 0;
+        @media (min-width: 1441px) {
+            padding-left: 8.85416vw;
+            p { max-width: 28.2291vw }
         }
+        @media (max-width: 500px) { padding-left: 0 }
 
         ul {
             display: grid;
@@ -163,6 +223,11 @@
             grid-gap: 1.66vw 2.0833vw;
             
             padding-top: 4.166vw;
+
+            @media (min-width: 1441px) {
+                grid-gap: 1.25vw 1.5625vw;
+                padding-top: 3.125vw;
+            }
             
             @media (max-width: 500px) {
                 padding-top: 9.0666vw;
@@ -178,6 +243,11 @@
                     width: 100%;
 
                     margin: 0.5vw 1.11vw 0 0;
+
+                    @media (min-width: 1441px) {
+                        max-width: 3.541vw;
+                        margin: 0.3645vw 0.8333vw 0 0;
+                    }
                     
                     @media (max-width: 500px) {
                         margin: 0.5vw 4.26666vw 0 0;
@@ -194,6 +264,10 @@
                 span {
                     line-height: 120%;
                     font-size: 0.9722vw;
+                    
+                    @media (min-width: 1441px) {
+                        font-size: 0.729vw;
+                    }
                             
                     @media (max-width: 500px) {
                         font-size: 2.6666vw;
@@ -206,11 +280,18 @@
     
     &--awards {
         & main p:not(:last-of-type) { margin-bottom: 6.4vw }
+                    
+        @media (min-width: 1441px) {
+            & main p:not(:last-of-type) { margin-bottom: 3.125vw }
+        }
 
         .about__content {
             margin-bottom: 14.933vw;
+            @media (min-width: 1441px) { margin-bottom: 11.197vw }
+    
             p {
                 margin-bottom: 6.4vw;
+                @media (min-width: 1441px) { margin-bottom: 4.791vw }
                 &:last-child { margin-bottom: 0 }
             }
         }
@@ -219,6 +300,11 @@
     &--media {
         .about__content {
             margin-bottom: 14.933vw;
+            @media (min-width: 1441px) {
+                width: 100%;
+                max-width: 42vw;
+                margin-bottom: 11.197vw
+            }
         }
     }
 }

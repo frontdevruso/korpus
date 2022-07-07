@@ -12,8 +12,8 @@
     background: transparent;
     border-bottom: 0.1388vw solid #8D8D8B;
 
+    @media (min-width: 1441px) { border-bottom: 0.10416vw solid #8D8D8B }
     cursor: pointer;
-
     &.g-select-error { border-color: #C3161C }
 
     & .options-container {
@@ -45,6 +45,15 @@
             background-color: rgb(206, 206, 206);
         }
 
+        @media (min-width: 1441px) {
+            left: -0.05208vw;
+            font-size: 0.83333vw;
+            border: 0.10416vw solid #8D8D8B;
+
+            &::-webkit-scrollbar { width: 0.9375vw }
+            &::-webkit-scrollbar-thumb { border: 0.3125vw solid rgba(0, 0, 0, 0) }
+        }
+
         @media (max-width: 500px) {
             font-size: 4vw;
             &::-webkit-scrollbar { width: 4.8vw }
@@ -56,10 +65,9 @@
             opacity: 1;
             overflow-y: scroll;
             z-index: 10;
-
-            @media (max-width: 500px) {
-                max-height: 21vw;
-            }
+            
+            @media (min-width: 1441px) { max-height: 10.4166vw }
+            @media (max-width: 500px) { max-height: 21vw }
         }
 
         & .option {
@@ -76,6 +84,11 @@
 
                 transition: .4s;
                 border-radius: 0 0.3472vw 0.3472vw 0;
+
+                @media (min-width: 1441px) {
+                    padding: 0.78125vw 0.625vw;
+                    border-radius: 0 0.26041vw 0.26041vw 0;
+                }
 
                 &:hover { background-color: #dfdfdf }
             }
@@ -94,6 +107,11 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @media (min-width: 1441px) {
+            font-size: 0.8333vw;
+            padding: 0.83333vw 3.57em 0.83333vw 0;
+        }
         
         @media (max-width: 500px) {
             font-size: 4vw;
@@ -115,6 +133,11 @@
 
         &-opened { transform: rotate(-180deg) translateY(50%) }
 
+        @media (min-width: 1441px) {
+            width: 0.8333vw;
+            height: 0.8333vw;
+        }
+        
         @media (max-width: 500px) {
             width: 3.2vw;
             height: 3.2vw;

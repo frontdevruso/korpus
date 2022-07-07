@@ -16,6 +16,13 @@
         transition: background-color 200ms;
         cursor: pointer;
 
+        @media (min-width: 1441px) {
+            width: 2.5vw;
+            max-width: 2.5vw;
+            height: calc(var(--switcher-checkbox-height) - 0.052083vw);
+            border: 0.052083vw solid black;
+        }
+
         @media (max-width: 500px) {
             width: 11.733vw;
             max-width: 11.733vw;
@@ -30,22 +37,31 @@
         height: var(--switcher-checkbox-height);
 
         border-radius: 100%;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.5);
         border: 0.06944vw solid black;
         box-sizing: border-box;
 
         transition: transform 250ms, background-color 250ms;
         pointer-events: none;
-        transform: translateX(calc(100% + 0.1388vw));
+        transform: translateX(calc(-0.06944vw));
+
+        @media (min-width: 1441px) {
+            pointer-events: none;
+            transform: translateX(calc(-0.052083vw))
+        }
 
         @media (max-width: 500px) {
+            background-color: black;
             border: 0.26666vw solid black;
-            transform: translateX(calc(100% - 0.533vw));
+            transform: translateX(calc(-0.533vw));
         }
     }
       
     .switch:checked + div > div {
-        transform: translateX(calc(-0.06944vw));
-        background-color: rgba(0, 0, 0, 0.5);
-    }
+        transform: translateX(calc(100% + 0.1388vw)); 
+        background-color: black;
+        
+        @media (min-width: 1441px) { transform: translateX(calc(100% + 0.104166vw)) }
+        @media (max-width: 500px) { transform: translateX(calc(100% - 0.533vw)) }
+    } 
 }

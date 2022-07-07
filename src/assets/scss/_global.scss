@@ -7,14 +7,10 @@ select {
     outline: none;
     border: none;
 
-    &:focus {
-        outline: none;
-    }
+    &:focus { outline: none }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
+h1, h2, h3, h4, h5, h6 { margin: 0 }
 
 h4 {
     font-weight: 400;
@@ -23,6 +19,7 @@ h4 {
 
     text-transform: uppercase;
 
+    @media (min-width: 1441px) { font-size: 1.04166vw }
     @media (max-width: 500px) { font-size: 6vw }
 }
 
@@ -58,7 +55,7 @@ input:focus, textarea:focus, button:focus { outline: none }
 }
 
 .hide__500px {
-    display: inherit !important;
+    display: inherit;
     @media (max-width: 500px) { display: none !important }
 }
 
@@ -70,10 +67,9 @@ input:focus, textarea:focus, button:focus { outline: none }
     flex-direction: column;
 
     height: 100%;
-
-    @media (max-width: 500px) {
-        padding: 4.8vw 6.4vw 0;
-    }
+    box-sizing: border-box;
+    @media (min-width: 1441px) { padding: 1.666vw 2.5vw 0 4.166vw }
+    @media (max-width: 500px) { padding: 4.8vw 6.4vw 0 }
 }
 
 .g-title {
@@ -90,6 +86,11 @@ input:focus, textarea:focus, button:focus { outline: none }
     flex-direction: row;
     min-height: 6.25vw;
 
+    @media (min-width: 1441px) {
+        font-size: 6.5104vw;
+        min-height: 6.5104vw;
+    }
+
     @media (max-width: 500px) {
         font-size: 9.333vw;
         min-height: 9.333vw;
@@ -97,7 +98,7 @@ input:focus, textarea:focus, button:focus { outline: none }
 
     span {
         // cubic-bezier(.88,1.73,.13,.8)
-        transform: translateY(100%);
+        transform: translateY(95%);
         transition: .6s cubic-bezier(.04,1.38,.66,1) transform;
 
         display: flex;
@@ -119,6 +120,8 @@ input:focus, textarea:focus, button:focus { outline: none }
 
     transition: .5s ease color;
 
+    @media (min-width: 1441px) { margin-top: 0.15625vw }
+
     span {
         font-weight: 400;
         font-size: 0.972vw;
@@ -130,6 +133,11 @@ input:focus, textarea:focus, button:focus { outline: none }
 
         margin: auto 0;
         white-space: nowrap;
+
+        @media (min-width: 1441px) {
+            font-size: 0.72916vw;
+            padding: 0.208vw 0.416vw 0;
+        }
 
         @media (max-width: 500px) {
             font-size: 2.666vw;
@@ -146,6 +154,10 @@ input:focus, textarea:focus, button:focus { outline: none }
         font-weight: 500;
         font-size: 1.38vw;
         line-height: 1;
+
+        @media (min-width: 1441px) {
+            font-size: 1.0416vw;
+        }
 
         @media (max-width: 500px) {
             font-size: 3.733vw;
@@ -176,6 +188,13 @@ input:focus, textarea:focus, button:focus { outline: none }
         &:focus {
             &::placeholder { opacity: 0 }
         }
+
+        
+        @media (min-width: 1441px) {
+            padding: 0 0 0.8333vw;
+            font-size: 0.8333vw;
+            border-bottom: 0.1041vw solid #8D8D8B;
+        }
         
         @media (max-width: 500px) {
             padding: 0 0 3.2vw;
@@ -197,10 +216,9 @@ input:focus, textarea:focus, button:focus { outline: none }
     padding: 0.416vw 0;
     position: relative;
     background-color: transparent;
-    
-    @media (max-width: 500px) {
-        padding: 2.666vw 0;
-    }
+        
+    @media (min-width: 1441px) { padding: 0.3125vw 0 }
+    @media (max-width: 500px) { padding: 2.666vw 0 }
 
     span {
         font-weight: 400;
@@ -210,6 +228,11 @@ input:focus, textarea:focus, button:focus { outline: none }
         width: 100%;
         max-width: fit-content;
         padding-right: 1.3888vw;
+
+        @media (min-width: 1441px) {
+            font-size: 0.8333vw;
+            padding-right: 1.0416vw;
+        }
 
         @media (max-width: 500px) {
             font-size: 4vw;
@@ -227,6 +250,11 @@ input:focus, textarea:focus, button:focus { outline: none }
             width: 0.4861vw;
             height: 0.7638vw;
             margin-left: auto;
+
+            @media (min-width: 1441px) {
+                width: 0.3645vw;
+                height: 0.5729vw;
+            }
 
             @media (max-width: 500px) {
                 width: 2.933vw;
@@ -249,6 +277,12 @@ input:focus, textarea:focus, button:focus { outline: none }
             height: 0.05vw;
             background-color: black;
 
+            @media (min-width: 1441px) {
+                right: 0.0520vw;
+
+                width: 0.7291vw;
+                height: 0.052vw;
+            }
             
             @media (max-width: 500px) {
                 width: 2.1333vw;

@@ -8,6 +8,11 @@
 
     background-color: $mainGray;
 
+    @media (min-width: 1441px) {
+        padding: 0 1.5625vw 0 4.1666vw;
+        border-bottom: 0.104166vw solid black;
+    }
+
     @media (max-width: 500px) {
         padding: 0 3.733vw 0 6.4vw;
         border-bottom: 0.266vw solid black;
@@ -47,6 +52,11 @@
         img {
             width: 6.041vw;
             height: 2.8472vw;
+            
+            @media (min-width: 1441px) {
+                width: 5.98958vw;
+                height: 2.8125vw;
+            }
 
             @media (max-width: 500px) {
                 width: 16.8vw;

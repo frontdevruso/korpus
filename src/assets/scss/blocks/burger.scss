@@ -2,6 +2,10 @@
     --lines-burger: 3.333vw;
     --lines-anim: ease;
     
+    @media (min-width: 1441px) {
+        --lines-burger: 2.5vw;
+    }
+
     @media (max-width: 500px) {
         --lines-burger: 6.4vw;
     }
@@ -38,6 +42,13 @@
 
         &.show { width: var(--lines-burger) }
         &:last-child { transform: translateY(2.0138vw) }
+
+        @media (min-width: 1441px) {
+            max-height: 0.15625vw;
+            transform: translateY(0.98958vw);
+
+            &:last-child { transform: translateY(1.51041vw) }
+        }
             
         @media (max-width: 500px) {
             max-height: 0.4vw;
@@ -51,12 +62,16 @@
             top: 0.451388vw;
             transform: translateY(1.3194vw) rotate(36.71deg);
             &:last-child { transform: translateY(1.3194vw) rotate(-36.71deg) }
+
+            @media (min-width: 1441px) {
+                top: 0.3125vw;
+                transform: translateY(0.9895vw) rotate(36.71deg);
+                &:last-child { transform: translateY(0.9895vw) rotate(-36.71deg) }
+            }
         }
         
         @media (max-width: 500px) {
-            span {
-                top: 0.9vw;
-            }
+            span { top: 0.9vw }
         }
     }
 }

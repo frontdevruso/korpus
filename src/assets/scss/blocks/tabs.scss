@@ -16,6 +16,7 @@
 
     box-sizing: border-box;
 
+    @media (min-width: 1441px) { border-top: 0.104166vw solid black }
     @media (max-width: 500px) { border-top: 0.2666vw solid black }
 
     &.hide {
@@ -63,12 +64,14 @@
 
         padding: 2.222vw 4.7222vw 9.58333vw;
             
+        @media (min-width: 1441px) { padding: 1.6666vw 3.54166vw 7.18749vw }
         @media (max-width: 500px) { padding: 4.8vw 0 10.666vw 10.666vw }
 
         h1 {
             width: fit-content;
             margin: 0 0 9.0277vw;
             
+            @media (min-width: 1441px) { margin: 0 0 10.416vw }
             @media (max-width: 500px) { margin: 0 0 30.666vw }
         }
     }
@@ -91,6 +94,11 @@
             grid-template-rows: 3.125vw auto 17.6388vw auto;
             
             max-width: 15.0694vw;
+
+            @media (min-width: 1441px) {
+                grid-template-rows: 2.34375vw auto 13.2291vw auto;
+                max-width: 11.30208vw;
+            }
 
             @media (max-width: 500px) {
                 min-width: 53.866vw;
@@ -119,6 +127,11 @@
 
                 margin: 1.111vw 0 2.7083vw;
                 
+                @media (min-width: 1441px) {
+                    font-size: 1.19791vw;
+                    margin: 0.8333vw 0 2.03125vw;
+                }
+                
                 @media (max-width: 500px) {
                     font-size: 4vw;
                     margin: 4.266vw 0 4.266vw;
@@ -133,6 +146,11 @@
                 overflow: hidden;
                 margin-bottom: 2vw;
 
+                @media (min-width: 1441px) {
+                    font-size: 0.8333vw;
+                    margin-bottom: 1.510416vw;
+                }
+
                 @media (max-width: 500px) {
                     font-size: 4vw;
                     margin-bottom: 4vw;
@@ -143,6 +161,11 @@
                 img {
                     width: 4.5138vw;
                     height: 0.6944vw;
+
+                    @media (min-width: 1441px) {
+                        width: 3.385416vw;
+                        height: 0.52083vw;
+                    }
                     
                     @media (max-width: 500px) {
                         width: 14.399vw;
@@ -156,6 +179,11 @@
                     width: 5.625vw;
                     height: 1.18055vw;
 
+                    @media (min-width: 1441px) {
+                        width: 4.21875vw;
+                        height: 0.88541vw;
+                    }
+
                     @media (max-width: 500px) {
                         width: 16.8vw;
                         height: 3.733vw;
@@ -167,6 +195,8 @@
                 img {
                     width: 10.833vw;
                     height: auto;
+                    
+                    @media (min-width: 1441px) { width: 8.125vw }
 
                     @media (max-width: 500px) {
                         width: 32vw;
@@ -179,6 +209,11 @@
                 img {
                     width: 2.222vw;
                     height: 1.31944vw;
+
+                    @media (min-width: 1441px) {
+                        width: 1.6666vw;
+                        height: 0.98958vw;
+                    }
 
                     @media (max-width: 500px) {
                         width: 7.466vw;

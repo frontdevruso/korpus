@@ -4,8 +4,10 @@ function growingAnim(elements) {
         document.addEventListener('DOMContentLoaded', function() {
             function mainAnim() {
                 allElements.forEach(function(item, index) {
-                    let pcHeight = 14.652;     // DESKTOP SIZE OF ITEM IN VW
+                    let fullHd = 12.76041;     // DESKTOP SIZE OF ITEM IN VW
+                    let mediumHd = 14.652;     // DESKTOP SIZE OF ITEM IN VW
                     let mbHeight = 44;         // MOBILE SIZE OF ITEM IN VW
+                    let pcHeight = window.innerWidth >= 1440 ? fullHd : mediumHd;
                     let currentHeight = window.innerWidth <= 500 ? mbHeight : pcHeight;
     
                     item.classList.add('disabled');
@@ -37,12 +39,6 @@ function growingAnim(elements) {
                 })
             }
             mainAnim();
-            let windowWidth = window.innerWidth;
-            window.addEventListener("resize", () => {
-                if (window.innerWidth !== windowWidth) {
-                    mainAnim();
-                }
-            });
         })
     }
 }

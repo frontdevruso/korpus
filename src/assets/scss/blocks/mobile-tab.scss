@@ -18,6 +18,8 @@
     transform: translateX(-100%);
     display: none !important;
 
+    @media (min-width: 1441px) { border: 0.2083vw solid black }
+
     &.open {
         transform: initial;
         height: calc(100% - var(--header-height));
@@ -28,9 +30,7 @@
         transition: .6s ease;
     }
 
-    @media (max-width: 500px) {
-        display: initial !important;
-    }
+    @media (max-width: 500px) { display: initial !important }
     
     &__container {
         display: flex;
@@ -38,6 +38,7 @@
         padding: 26.666vw 6.4vw 0;
 
         min-height: 100%;
+        @media (min-width: 1441px) { padding: 20vw 4.79166vw 0 }
     }
 
     &__slider {

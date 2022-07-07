@@ -3,10 +3,8 @@
 
     &__container {
         padding-bottom: 3.333vw;
-        
-        @media (max-width: 500px) {
-            padding-bottom: 8.5333vw;
-        }
+        @media (min-width: 1441px) { padding-bottom: 2.5vw }
+        @media (max-width: 500px) { padding-bottom: 8.5333vw }
 
         & > main {
             p {
@@ -14,14 +12,18 @@
                 font-size: 1.111vw;
                 line-height: 140%;
 
-                @media (max-width: 500px) {
-                    font-size: 2.666vw;
-                }
+                @media (min-width: 1441px) { font-size: 0.8333vw }
+                @media (max-width: 500px) { font-size: 2.666vw }
             }
     
             h1 {
                 font-size: 2.777vw;
                 min-height: 2.777vw;
+
+                @media (min-width: 1441px) {
+                    font-size: 2.7083vw;
+                    min-height: 2.7083vw;
+                }
 
                 @media (max-width: 500px) {
                     font-size: 6vw;
@@ -37,6 +39,11 @@
 
         margin-bottom: 6.944vw;
 
+        @media (min-width: 1441px) {
+            max-width: 35.3125vw;
+            margin-bottom: 5.20833vw;
+        }
+
         @media (max-width: 500px) {
             max-width: none;
             margin-bottom: 26.666vw;
@@ -48,6 +55,11 @@
             line-height: 140%;
 
             margin-bottom: 2.222vw;
+
+            @media (min-width: 1441px) {
+                font-size: 0.8333vw;
+                margin-bottom: 1.66666vw;
+            }
 
             @media (max-width: 500px) {
                 font-size: 2.666vw;
@@ -62,12 +74,14 @@
             button, a {
                 &:not(:last-child) { margin-right: 1.111vw }
                 &.active { color: #ABAAA8 }
+                
+                @media (min-width: 1441px) {
+                    &:not(:last-child) { margin-right: 0.833vw }
+                }
 
                 @media (max-width: 500px) {
                     &:not(:last-child) { margin-right: 4.2666vw }
-                    span {
-                        font-size: 2.66666vw;
-                    }
+                    span { font-size: 2.66666vw }
                 }
             }
         }
@@ -76,14 +90,18 @@
     &__paragraph {
         display: flex;
         margin: 2.222vw 0 1.7361vw;
-
-        @media (max-width: 500px) {
-            margin: 4.266vw 0 10.6666vw;
-        }
+                      
+        @media (min-width: 1441px) { margin: 1.66666vw 0 1.3020vw }
+        @media (max-width: 500px) { margin: 4.266vw 0 10.6666vw }
 
         p {
             max-width: 18.75vw;
             &:not(:last-child) { margin-right: 3.333vw }
+
+            @media (min-width: 1441px) { 
+                max-width: 14.0625vw;
+                &:not(:last-child) { margin-right: 2.5vw }
+            }
 
             @media (max-width: 500px) {
                 max-width: none;
@@ -96,6 +114,8 @@
         display: flex;
         justify-content: space-between;
 
+        @media (min-width: 1441px) { max-width: 70.3125vw }
+
         @media (max-width: 500px) {
             flex-direction: column;
             justify-content: start;
@@ -107,6 +127,7 @@
             max-width: 18.75vw;
             width: 100%;
 
+            @media (min-width: 1441px) { max-width: 14.0625vw }
             @media (max-width: 500px) {
                 max-width: none;
                 &:not(:last-child) { margin-bottom: 6.4vw }
@@ -117,9 +138,8 @@
                 justify-content: space-between;
                 margin-bottom: 1.11vw;
 
-                @media (max-width: 500px) {
-                    margin-bottom: 0;
-                }
+                @media (min-width: 1441px) { margin-bottom: 0.8333vw }
+                @media (max-width: 500px) { margin-bottom: 0 }
 
                 & > main {
                     p, span {
@@ -127,28 +147,25 @@
                         font-size: 1.111vw;
                         line-height: 120%;
 
-                        @media (max-width: 500px) {
-                            font-size: 2.666vw;
-                        }
+                        @media (min-width: 1441px) { font-size: 0.8333vw }
+                        @media (max-width: 500px) { font-size: 2.666vw }
                     }
     
                     p {
                         margin-bottom: 0.4166vw;
-                        @media (max-width: 500px) {
-                            margin-bottom: 0.533vw;
-                        }
+                        @media (min-width: 1441px) { margin-bottom: 0.3125vw }
+                        @media (max-width: 500px) { margin-bottom: 0.533vw }
                     }
     
-                    button {
+                    button, a {
                         padding: 0;
                         display: flex;
                         align-items: center;
     
                         span {
                             margin-right: 0.6944vw;
-                            @media (max-width: 500px) {
-                                margin-right: 1.6vw;
-                            }
+                            @media (min-width: 1441px) { margin-right: 0.5208vw }
+                            @media (max-width: 500px) { margin-right: 1.6vw }
                         }
     
                         svg {
@@ -161,6 +178,11 @@
                             fill: black;
     
                             transform: rotate(180deg);
+
+                            @media (min-width: 1441px) {
+                                max-width: 0.7291vw;
+                                height: 0.7291vw;
+                            }
 
                             @media (max-width: 500px) {
                                 max-width: 2.1333vw;
@@ -197,9 +219,7 @@
                     flex-direction: column;
                     box-sizing: border-box;
                     
-                    @media (max-width: 500px) {
-                        padding: 4.2666vw 0 0 0;
-                    }
+                    @media (max-width: 500px) { padding: 4.2666vw 0 0 0 }
                 }
 
                 @media (max-width: 500px) {
@@ -210,7 +230,5 @@
         }
     }
 
-    &__save {
-        display: flex;
-    }
+    &__save { display: flex }
 }

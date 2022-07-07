@@ -12,7 +12,8 @@
     overflow: hidden;
     border-bottom: 0.138vw solid black;
     box-sizing: border-box;
-    
+
+    @media (min-width: 1441px) { border-bottom: 0.10416vw solid black }
     @media (max-width: 500px) { border-bottom: 0.2666vw solid black }
     
     &.t-anim { transition: 1.5s ease all }
@@ -44,6 +45,7 @@
         right: 0;top: 0;
         
         background-color: $mainGray;
+        @media (min-width: 1441px) { border-left: 0.10416vw solid black }
         @media (max-width: 500px) { border-left: 0.2666vw solid black }
     }
 
@@ -61,6 +63,8 @@
         position: relative;
         bottom: 0;
 
+        @media (min-width: 1441px) { padding: 0 0 2.5vw 4.1666vw }
+
         @media (max-width: 500px) {
             justify-content: space-between;
             padding: 8.5333vw 6.4vw 8.533vw;
@@ -73,10 +77,28 @@
             font-size: 1.11vw;
             line-height: 120%;
 
+            @media (min-width: 1441px) {
+                margin-right: 11.9791vw;
+                font-size: 0.83333vw;
+            }
+
             @media (max-width: 500px) {
                 font-size: 2.666vw;
                 margin-right: 0;
                 max-width: 34.66vw;
+            }
+        }
+
+        .g-btn {
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            @media (max-width: 500px) {
+                position: initial;
+                transform: initial;
+                top: initial;bottom: initial;
             }
         }
     }
@@ -99,6 +121,16 @@
             display: flex;
             justify-content: space-between;
             transition: 1s ease height;
+
+            @media (min-width: 1441px) {
+                border-bottom: 0.10416vw solid black;
+                box-sizing: border-box;
+        
+                height: 12.76041vw;
+                min-height: 12.76041vw !important;
+                max-height: 12.76041vw !important;
+                padding: 0 0 0 4.16666vw;
+            }
             
             &.active {
                 @media (max-width: 500px) {
@@ -137,6 +169,7 @@
                     height: fit-content;
                     width: 100%;
                     
+                    @media (min-width: 1441px) { margin-top: 1.66666vw }
                     @media (max-width: 500px) { margin-top: 0 }
                 }
             }
@@ -152,6 +185,8 @@
                 opacity: 0;
                 transition: 1s ease;
                 padding: 3.75vw 3.472vw 0 0;
+
+                @media (min-width: 1441px) { padding: 2.8125vw 2.6041vw 0 0 }
 
                 @media (max-width: 500px) {
                     justify-content: start;
@@ -171,6 +206,11 @@
 
                     &:not(:last-child) { margin-right: 4.44vw }
 
+                    @media (min-width: 1441px) {
+                        max-width: 17.1875vw;
+                        &:not(:last-child) { margin-right: 3.3333vw }
+                    }
+
                     @media (max-width: 500px) {
                         max-width: none;
                         &:not(:last-child) { margin-right: 0 }
@@ -180,12 +220,15 @@
                     }
 
                     .arrow-link {
-                        border: 0.138vw solid black;
-                        border-right: none;border-left: none;
+                        border-bottom: 0.138vw solid black;
+                        &:first-child { border-top: 0.138vw solid black }
 
-                        &:not(:last-child) { border-bottom: none }
-
+                        @media (min-width: 1441px) {
+                            border-bottom: 0.10416vw solid black;
+                            &:first-child { border-top: 0.10416vw solid black }
+                        }
                         @media (max-width: 500px) {
+                            &:first-child { border-top: 0.2666vw solid black }
                             border-bottom: 0.2666vw solid black;
                         }
                     }

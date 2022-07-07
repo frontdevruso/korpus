@@ -2,6 +2,12 @@
     max-width: 36vw;
     margin-left: 6.66vw !important;
 
+    @media (min-width: 1441px) {
+        max-width: 39.166vw;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
     @media (max-width: 500px) {
         max-width: 100%;
         margin-left: 0 !important;   
@@ -16,6 +22,11 @@
             flex-direction: column;
 
             &:not(:last-child) { margin-bottom: 2.777vw }
+            
+            @media (min-width: 1441px) {
+                &:not(:last-child) { margin-bottom: 2.0833vw }
+            }
+
             a {
                 font-weight: 400;
                 font-size: 1.11vw;
@@ -26,6 +37,11 @@
 
                 text-transform: uppercase;
                 margin-bottom: 0.27vw;
+
+                @media (min-width: 1441px) {
+                    font-size: 0.833vw;
+                    margin-bottom: 0.20833vw;
+                }
 
                 @media (max-width: 500px) {
                     font-size: 4vw;
@@ -41,6 +57,11 @@
                 margin-bottom: 0.833vw;
                 text-transform: initial;
 
+                @media (min-width: 1441px) {
+                    font-size: 1.04166vw;
+                    margin-bottom: 0.625vw;
+                }
+
                 @media (max-width: 500px) {
                     font-size: 5.333vw;
                     margin-bottom: 4.266vw;
@@ -53,9 +74,8 @@
                 line-height: 120%;
                 letter-spacing: 0.01em;
 
-                @media (max-width: 500px) {
-                    font-size: 4vw;
-                }
+                @media (min-width: 1441px) { font-size: 0.833vw }
+                @media (max-width: 500px) { font-size: 4vw }
             }
         }
     }

@@ -52,28 +52,6 @@ body {
     }
 }
 
-.m-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-
-    @media (max-width: 1300px) { 
-        overflow: hidden;
-        position: fixed;
-
-        .header {
-            height: 100vh;
-            width: 100%;
-            position: fixed;
-            z-index: 50;
-            top: 0;
-
-            .menu { display: flex }
-        }
-    }
-}
-
 @import 'fonts';
 @import 'global';
 

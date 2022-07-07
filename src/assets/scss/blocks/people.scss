@@ -1,9 +1,19 @@
 .people {
     height: 100%;
+
+    h1 {
+        @media (min-width: 1441px) {
+            font-size: 4.6875vw;
+            min-height: 4.6875vw;
+        }
+    }
+
     main {
         padding-top: 4.44vw;
         display: flex;
         justify-content: space-between;
+
+        @media (min-width: 1441px) { padding-top: 3.75vw }
 
         @media (max-width: 500px) {
             padding-top: 8.5333vw;
@@ -18,6 +28,7 @@
         flex-direction: column;
         
         & > * { margin-bottom: 0 }
+        @media (min-width: 1441px) { max-width: 41.1458vw }
 
         p {
             font-weight: 400;
@@ -27,7 +38,15 @@
 
             margin-bottom: 2.222vw;
 
+            &.hide__500px, &.show__500px { display: initial }
             &:last-child { margin-bottom: 2.777vw }
+
+            @media (min-width: 1441px) {
+                font-size: 0.83333vw;
+                margin-bottom: 1.66666vw;
+    
+                &:last-child { margin-bottom: 2.08333vw }
+            }
             
             @media (max-width: 500px) {
                 font-size: 4.2666vw;
@@ -38,9 +57,7 @@
             }
         }
                     
-        @media (max-width: 500px) {
-            max-width: none;
-        }
+        @media (max-width: 500px) { max-width: none }
 
         span {
             font-weight: 400;
@@ -49,7 +66,13 @@
             letter-spacing: 0.01em;
 
             margin-bottom: 1.111vw;
+            &.hide__500px, &.show__500px { display: initial }
             &:last-child { margin-bottom: 0 }
+
+            @media (min-width: 1441px) {
+                font-size: 0.85333vw;
+                margin-bottom: 0.85333vw;
+            }
 
             @media (max-width: 500px) {
                 font-size: 4.2666vw;
@@ -59,12 +82,9 @@
             a {
                 color: $cathedral;
                 text-transform: uppercase;
-
                 transition: .5s ease color;
 
-                &:hover {
-                    color: #191919;
-                }
+                &:hover { color: #191919 }
             }
         }
     }
@@ -72,6 +92,8 @@
     &__quotes {
         max-width: 37.7777vw;
         width: 100%;
+
+        @media (min-width: 1441px) { max-width: 39.166vw }
 
         @media (max-width: 500px) {
             max-width: none;
@@ -82,6 +104,11 @@
             display: grid;
             grid-gap: 2.222vw;
             margin-top: 4.1666vw;
+
+            @media (min-width: 1441px) {
+                grid-gap: 1.666vw;
+                margin-top: 3.125vw;
+            }
             
             @media (max-width: 500px) {
                 grid-gap: 2.133vw;
@@ -97,27 +124,30 @@
                     font-size: 1.111vw;
                     line-height: 120%;
 
-                    @media (max-width: 500px) {
-                        font-size: 4.2666vw;
-                    }
+                    @media (min-width: 1441px) { font-size: 0.8333vw }
+                    @media (max-width: 500px) { font-size: 4.2666vw }
                 }
 
                 p {
                     margin-bottom: 1.111vw;
-                    @media (max-width: 500px) {
-                        margin-bottom: 4.2666vw;
-                    }
+                    @media (min-width: 1441px) { margin-bottom: 0.8333vw }
+                    @media (max-width: 500px) { margin-bottom: 4.2666vw }
                 }
 
-                span {
-                    margin-left: auto;
-                }
+                span { margin-left: auto }
 
                 svg {
                     width: 1.388vw;
                     height: 1.111vw;
 
                     margin-bottom: 0.555vw;
+
+                    @media (min-width: 1441px) {
+                        width: 1.04166vw;
+                        height: 0.8333vw;
+    
+                        margin-bottom: 0.41666vw;
+                    }
 
                     @media (max-width: 500px) {
                         width: 6.4vw;
@@ -132,7 +162,8 @@
                         margin-bottom: 0;
 
                         margin-left: auto;
-                        
+
+                        @media (min-width: 1441px) { margin-top: 0.4166vw }
                         @media (max-width: 500px) {
                             width: 6.4vw;
                             height: 4.8vw;

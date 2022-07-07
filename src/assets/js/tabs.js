@@ -29,7 +29,8 @@ function switchingSecondTabs(allTabsBtns, allTabs, tabsContent) {
             btn.addEventListener('click', function() {
                 let serialNumber = this.getAttribute('data-second-tab-btn');
                 let currentActiveTab = tabsContent.querySelector('.open');
-                if (currentActiveTab.getAttribute('data-second-tab') === serialNumber) {
+
+                if (currentActiveTab ? currentActiveTab.getAttribute('data-second-tab') === serialNumber : false) {
                     return
                 } else {
                     allTabs.forEach(function(tab) {

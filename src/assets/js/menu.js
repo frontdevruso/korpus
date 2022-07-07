@@ -19,7 +19,7 @@ if (document.querySelector('.burger')) {
             body.classList.remove('purple-mood');
                 
             menu.classList.toggle('open');
-            menu.querySelector('.menu__footer').classList.add('hide');
+            // menu.querySelector('.menu__footer').classList.add('hide');
     
             if (document.querySelector('.second-tab').classList.contains('show')) {
                 if (!menu.classList.contains('open')) {
@@ -32,7 +32,7 @@ if (document.querySelector('.burger')) {
             setTimeout(function() {
                 burger.disabled = false;
                 menu.classList.toggle('t-anim');
-                menu.querySelector('.menu__footer').classList.remove('hide');
+                // menu.querySelector('.menu__footer').classList.remove('hide');
             }, 1500);
         }
     });

@@ -7,6 +7,12 @@ $cathedral: #ABAAA8;
     --switchbar-width: 5.55vw;
     --switcher-checkbox-height: 1.666vw;
     
+    @media (min-width: 1441px) {
+        --header-height: 5.2083vw;
+        --switchbar-width: 4.166vw;
+        --switcher-checkbox-height: 1.25vw;
+    }
+
     @media (max-width: 500px) {
         --switchbar-width: 12.266vw;
         --header-height: 18.66vw;
