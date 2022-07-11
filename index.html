@@ -33,9 +33,10 @@
                 <span></span>
                 <span></span>
             </button>
-            <form action="/" data-language-switcher="en" class="lang-switcher">
-                <button type="button" data-language="ru" class="lang-switcher__btn">ru</button>
-                <button type="button" data-language="en" class="lang-switcher__btn">en</button>
+            <form action="/" data-language-switcher class="lang-switcher">
+                <a type="button" data-language="ru" class="lang-switcher__btn lang-switcher__btn--1">ru</a>
+                <button type="button" data-language="en" class="lang-switcher__btn lang-switcher__btn--current">en</button>
+                <button type="button" data-language="ch" class="lang-switcher__btn lang-switcher__btn--3">ch</button>
             </form>
         </div>
     </header>
@@ -2100,24 +2101,24 @@
                         </main>
                         <div class="services__item-circle-title"><img src="./assets/images/svg/circle-text-3.svg" alt="svg"></div>
                     </div>
-            
-                </div>
-                <div class="services__cookies none">
-                    <div class="services__cookies-container">
-                        <p>
-                            We use cookies to ensure that we give you the best personalized experience on our website. 
-                            See our Privacy Policy to learn more about cookies
-                        </p>
-                        <p class="show__500px">See our Privacy Policy to learn more about cookies.</p>
-                        <div class="services__cookies-btns">
-                            <button class="g-btn cookies-btn cookies-accept" type="submit" data-second-tab-btn="1"><span>Accept all</span></button>
-                            <button class="g-btn cookies-btn cookies-decline" type="submit" data-second-tab-btn="1"><span>decline all</span></button>
-                            <a href="./cookies.html" class="g-btn" type="submit" data-second-tab-btn="1"><span>MANAGE</span></a>
-                        </div>
-                    </div>
                 </div>
             </section>
 
+        </div>
+
+        <div class="services__cookies none">
+            <div class="services__cookies-container">
+                <p>
+                    We use cookies to ensure that we give you the best personalized experience on our website. 
+                    See our Privacy Policy to learn more about cookies
+                </p>
+                <p class="show__500px">See our Privacy Policy to learn more about cookies.</p>
+                <div class="services__cookies-btns">
+                    <button class="g-btn cookies-btn cookies-accept" type="submit" data-second-tab-btn="1"><span>Accept all</span></button>
+                    <button class="g-btn cookies-btn cookies-decline" type="submit" data-second-tab-btn="1"><span>decline all</span></button>
+                    <a href="./cookies.html" class="g-btn" type="submit" data-second-tab-btn="1"><span>MANAGE</span></a>
+                </div>
+            </div>
         </div>
 
         <aside class="mobile-tab" data-mobile-tab-container="1">
