@@ -59,21 +59,21 @@
                 display: flex;
                 flex-direction: column;
 
-                padding: 0 0 4.7916vw 5.55vw;
+                padding: 0 0 3.8888vw 5.55vw;
                 cursor: pointer;
 
                 h1 {
                     transition: .5s ease;
-                    margin-top: 2.22vw;
+                    margin-top: 2.7777vw;
 
-                    @media (min-width: 1441px) { margin-top: 1.6666vw }
+                    @media (min-width: 1441px) { margin-top: 2.0833vw }
                     @media (max-width: 500px) {
                         margin-top: 0;
                         &:not(:last-child) { margin-bottom: 1.333vw }
                     }
                 }
 
-                @media (min-width: 1441px) { padding: 0 0 3.59374vw 4.16666vw }
+                @media (min-width: 1441px) { padding: 0 0 3.59374vw 3.2291vw }
                 @media (max-width: 500px) {
                     padding: 4.8vw 6.4vw 4.8vw 6.4vw;
                     height: 44vw;
@@ -339,6 +339,7 @@
 
                         flex-wrap: wrap;
                         margin-bottom: 1.111vw;
+                        width: fit-content;
 
                         @media (min-width: 1441px) { margin-bottom: 0.83333vw }
 
@@ -373,6 +374,9 @@
                     }
 
                     &-scope {
+                        max-width: none;
+                        @media (min-width: 1441px) { max-width: 17.1875vw }
+
                         p {
                             opacity: 0;
                             transition: .6s ease;
