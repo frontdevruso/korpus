@@ -2,13 +2,6 @@
     // height: calc(100% - var(--header-height) / 2);
     height: 100%;
 
-    h1 {
-        @media (min-width: 1441px) {
-            font-size: 4.6875vw;
-            min-height: 4.6875vw;
-        }
-    }
-
     main {
         padding-top: 4.44vw;
         display: flex;
@@ -286,8 +279,8 @@
         }
 
         .about__content {
-            margin-bottom: 14.933vw;
-            @media (min-width: 1441px) { margin-bottom: 11.197vw }
+            margin-bottom: 4.1666vw;
+            @media (min-width: 1441px) { margin-bottom: 3.125vw }
     
             p {
                 margin-bottom: 6.4vw;

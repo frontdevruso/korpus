@@ -1,7 +1,9 @@
 .lang-switcher {
-    margin: 0.2vw 0 0 2.0833vw;
+    margin: auto 0 auto 2.0833vw;
+
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 
     width: 1.666vw;
@@ -10,17 +12,27 @@
     position: relative;
 
     @media (min-width: 1441px) {
-        margin: 0.15625vw 0 0 1.5625vw;
+        margin: auto 0 auto 1.5625vw;
 
         width: 1.25vw;
         height: 0.83333vw;
     }
 
     @media (max-width: 500px) {
-        margin: 0 0 0 3.733vw;
+        margin: auto 0 auto 3.733vw;
 
         width: 4.8vw;
         height: 3.733vw;
+    }
+
+    &:hover {
+        .lang-switcher__btn {
+            opacity: 1;
+            z-index: 5;
+        }
+
+        .lang-switcher__btn--1 { transform: translateY(0) }
+        .lang-switcher__btn--3 { transform: translateY(0) }
     }
 
     &__btn {
@@ -30,33 +42,47 @@
 
         padding: 0;
         background-color: transparent;
-        transition: .6s ease opacity;
+        transition: .6s ease opacity, .6s ease transform;
 
         text-transform: uppercase;
         letter-spacing: 0.05em;
         display: flex;
 
-        opacity: 0;
-        z-index: -1;
-        position: absolute;
+        user-select: none;
+        color: #8F8F8E;
+        cursor: pointer;
 
+        width: fit-content;
+        height: fit-content;
+        
         @media (min-width: 1441px) { font-size: 0.833vw }
         @media (max-width: 500px) { font-size: 3.2vw }
-    }
-}
 
-[data-language-switcher="ru"] {
-    [data-language="en"] {
-        opacity: 1;
-        z-index: 5;
-        position: initial;
-    }
-}
+        &.hide { opacity: 0 !important }
+        &.zoom { transform: scale(1.2) }
 
-[data-language-switcher="en"] {
-    [data-language="ru"] {
-        opacity: 1;
-        z-index: 5;
-        position: initial;
+        &:not(.lang-switcher__btn--current) {
+            opacity: 0;
+            z-index: -1;
+        }
+
+        &--current {
+            margin: 0.26041vw 0;
+            color: black;
+
+            @media (min-width: 1441px) { margin: 0.3472vw 0 }
+            @media (max-width: 500px) { margin: 1.3333vw 0 }
+        }
+
+        &--1 {
+            transform: translateY(0.347222vw);
+            @media (min-width: 1441px) { transform: translateY(0.26041vw) }
+            @media (max-width: 500px) { transform: translateY(1.3333) }
+        }
+        &--3 {
+            transform: translateY(-0.347222vw);
+            @media (min-width: 1441px) { transform: translateY(-0.26041vw) }
+            @media (max-width: 500px) { transform: translateY(-1.3333) }
+        }
     }
 }

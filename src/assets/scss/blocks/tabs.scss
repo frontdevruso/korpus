@@ -36,6 +36,8 @@
 .second-tab {
     width: 0;
     position: relative;
+    z-index: 25;
+
     overflow: initial !important;
 
     padding-top: var(--header-height);
@@ -52,6 +54,8 @@
     &__wrapper {
         width: calc(100vw - var(--switchbar-width));
         height: calc(100vh - var(--header-height));
+
+        background: linear-gradient(90deg, #E5D4E9 0%, #E4D5EA 100%);
     }
 
     &__container {
@@ -69,7 +73,7 @@
 
         h1 {
             width: fit-content;
-            margin: 0 0 9.0277vw;
+            margin: 0 0 6.597222vw;
             
             @media (min-width: 1441px) { margin: 0 0 10.416vw }
             @media (max-width: 500px) { margin: 0 0 30.666vw }

@@ -99,7 +99,7 @@
         display: flex;
         flex-direction: column;
 
-        max-width: 37.777vw;
+        max-width: 39.583vw;
         min-height: 39.861vw;
 
         @media (min-width: 1441px) {
@@ -118,14 +118,73 @@
 
             &.show { opacity: 1 }
 
+            h4 {
+                margin-bottom: 0.34722vw;
+                
+                @media (min-width: 1441px) { margin-bottom: 0.26041vw }
+                @media (max-width: 500px) { margin-bottom: 1.333vw }
+            }
+
+            &-link {
+                width: fit-content;
+                display: flex;
+                margin: 0 0 0.55555vw -0.486111vw;
+                
+                @media (min-width: 1441px) {
+                    margin: 0 0 0.41666vw -0.364583vw;
+                }
+
+                @media (max-width: 500px) {
+                    margin: 0 0 2.1333vw -1.8666vw;
+                }
+
+                svg {
+                    width: 2.36111vw;
+                    height: 2.36111vw;
+
+                    @media (min-width: 1441px) {
+                        width: 1.770833vw;
+                        height: 1.770833vw;
+                    }
+                    
+                    @media (max-width: 500px) {
+                        width: 8vw;
+                        height: 8vw;
+                    }
+
+                    transition: .4s;
+                    fill: black;
+                }
+
+                &:hover {
+                    svg { fill: #ABAAA8 }
+                }
+            }
+
+            &-position {
+                font-weight: 400;
+                font-size: 1.111vw;
+                line-height: 120%;
+
+                color: #ABAAA8;
+
+                @media (min-width: 1441px) {
+                    font-size: 0.8333vw;
+                }
+
+                @media (max-width: 500px) {
+                   font-size: 4.2666vw;
+                }
+            }
+
             &-wrapper {
-                padding-top: 2.777vw;
+                padding-top: 3.1944vw;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 1.111vw;
                 
                 @media (min-width: 1441px) {
-                    padding-top: 3.75vw;
+                    padding-top: 2.3958vw;
                     grid-gap: 0.83333vw;
                 }
 
@@ -141,9 +200,26 @@
                     flex-direction: column;
                     width: 100%;
 
-                    & > *:first-child { margin-top: 0 }
+                    & > *:first-child {
+                        margin-top: 0;
+                        width: 19.861vw;
+                    }
+                    
+                    @media (min-width: 1441px) {
+                        width: initial;
+                    }
+
                     @media (max-width: 500px) {
+                        width: initial;
                         &:first-child { margin: 0 0 8.533vw 0 }
+                        & > *:first-child { width: initial }
+                    }
+
+                    &-mail {
+                        padding-top: 2.08333vw;
+                        margin-top: auto;
+                        
+                        @media (max-width: 500px) { padding-top: 5.3333vw }
                     }
                 }
                 
