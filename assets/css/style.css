@@ -296,7 +296,6 @@ input:focus, textarea:focus, button:focus {
   .g-btn::after, .g-btn::before {
     content: '';
     display: block;
-    margin-left: auto;
     font-weight: 500;
     font-size: 1.38vw;
     line-height: 1; }
@@ -557,7 +556,7 @@ input:focus, textarea:focus, button:focus {
       top: 0.9vw; } }
 
 .lang-switcher {
-  margin: 0.2vw 0 0 2.0833vw;
+  margin: auto 0 auto 2.0833vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -567,12 +566,12 @@ input:focus, textarea:focus, button:focus {
   position: relative; }
   @media (min-width: 1441px) {
     .lang-switcher {
-      margin: 0.15625vw 0 0 1.5625vw;
+      margin: auto 0 auto 1.5625vw;
       width: 1.25vw;
       height: 0.83333vw; } }
   @media (max-width: 500px) {
     .lang-switcher {
-      margin: 0 0 0 3.733vw;
+      margin: auto 0 auto 3.733vw;
       width: 4.8vw;
       height: 3.733vw; } }
   .lang-switcher:hover .lang-switcher__btn {
@@ -821,19 +820,19 @@ input:focus, textarea:focus, button:focus {
             flex-direction: column; }
             @media (min-width: 1441px) {
               .services__item-content-products-items-container {
-                margin-right: auto;
+                margin-left: auto;
                 max-width: 34.58333vw; } }
           .services__item-content-products-items h3 {
             font-weight: 400;
             font-size: 1.59722vw;
             line-height: 130%;
-            margin-bottom: 2.222vw;
-            white-space: nowrap; }
+            margin-bottom: 2.222vw; }
             @media (min-width: 1441px) {
               .services__item-content-products-items h3 {
                 font-size: 1.1979vw;
                 margin-bottom: 1.66666vw;
-                margin-right: 4.4270vw; } }
+                margin-right: 4.4270vw;
+                max-width: 7.8125vw; } }
             @media (max-width: 500px) {
               .services__item-content-products-items h3 {
                 font-size: 4vw;
@@ -858,7 +857,7 @@ input:focus, textarea:focus, button:focus {
               margin-bottom: 4.266vw; } }
           .services__item-content-products-items-info {
             display: grid;
-            grid-template-columns: 1fr 0.8fr;
+            grid-template-columns: 1fr 0.9fr;
             grid-gap: 3.3333vw;
             width: 100%;
             margin-bottom: 5vw; }
@@ -884,10 +883,13 @@ input:focus, textarea:focus, button:focus {
                 .services__item-content-products-items-info main:last-child {
                   display: none; } }
               .services__item-content-products-items-info main a {
-                padding: 0;
+                padding: 1.04166vw 0 0 0;
                 display: flex;
                 align-items: center;
                 margin-top: auto; }
+                @media (min-width: 1441px) {
+                  .services__item-content-products-items-info main a {
+                    padding-top: 0.78125vw; } }
                 .services__item-content-products-items-info main a span {
                   margin-right: 0.6944vw; }
                   @media (min-width: 1441px) {
@@ -2593,6 +2595,31 @@ input:focus, textarea:focus, button:focus {
         @media (max-width: 500px) {
           .team__content-employees h4 {
             margin-bottom: 1.333vw; } }
+      .team__content-employees-link {
+        width: fit-content;
+        display: flex;
+        margin: 0 0 0.55555vw -0.486111vw; }
+        @media (min-width: 1441px) {
+          .team__content-employees-link {
+            margin: 0 0 0.41666vw -0.364583vw; } }
+        @media (max-width: 500px) {
+          .team__content-employees-link {
+            margin: 0 0 2.1333vw -1.8666vw; } }
+        .team__content-employees-link svg {
+          width: 2.36111vw;
+          height: 2.36111vw;
+          transition: .4s;
+          fill: black; }
+          @media (min-width: 1441px) {
+            .team__content-employees-link svg {
+              width: 1.770833vw;
+              height: 1.770833vw; } }
+          @media (max-width: 500px) {
+            .team__content-employees-link svg {
+              width: 8vw;
+              height: 8vw; } }
+        .team__content-employees-link:hover svg {
+          fill: #ABAAA8; }
       .team__content-employees-position {
         font-weight: 400;
         font-size: 1.111vw;
@@ -2636,6 +2663,12 @@ input:focus, textarea:focus, button:focus {
                 margin: 0 0 8.533vw 0; }
               .team__content-employees-wrapper-column > *:first-child {
                 width: initial; } }
+          .team__content-employees-wrapper-column-mail {
+            padding-top: 2.08333vw;
+            margin-top: auto; }
+            @media (max-width: 500px) {
+              .team__content-employees-wrapper-column-mail {
+                padding-top: 5.3333vw; } }
         .team__content-employees-wrapper p {
           font-weight: 400;
           font-size: 1.111vw;
