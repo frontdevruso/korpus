@@ -194,9 +194,9 @@ function growingAnim(elements) {
             function mainAnim() {
                 allElements.forEach(function(item, index) {
                     let fullHd = 12.76041;     // DESKTOP SIZE OF ITEM IN VW
-                    let mediumHd = 14.652;     // DESKTOP SIZE OF ITEM IN VW
-                    let mbHeight = 44;         // MOBILE SIZE OF ITEM IN VW
-                    let pcHeight = window.innerWidth >= 1440 ? fullHd : mediumHd;
+                    let mediumHd = 14.50972;     // DESKTOP SIZE OF ITEM IN VW
+                    let mbHeight = 44.266;         // MOBILE SIZE OF ITEM IN VW
+                    let pcHeight = window.innerWidth > 1440 ? fullHd : mediumHd;
                     let currentHeight = window.innerWidth <= 500 ? mbHeight : pcHeight;
     
                     item.classList.add('disabled');
