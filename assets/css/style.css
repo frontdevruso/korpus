@@ -2657,7 +2657,7 @@ input:focus, textarea:focus, button:focus {
           width: 100%; }
           .team__content-employees-wrapper-column > *:first-child {
             margin-top: 0;
-            width: 19.861vw; }
+            max-width: 19.861vw; }
           @media (min-width: 1441px) {
             .team__content-employees-wrapper-column {
               width: initial; } }
