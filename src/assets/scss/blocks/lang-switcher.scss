@@ -7,22 +7,18 @@
     justify-content: center;
 
     width: 1.666vw;
-    height: 1.111vw;
+    height: fit-content;
 
     position: relative;
 
     @media (min-width: 1441px) {
         margin: auto 0 auto 1.5625vw;
-
         width: 1.25vw;
-        height: 0.83333vw;
     }
 
     @media (max-width: 500px) {
         margin: auto 0 auto 3.733vw;
-
         width: 4.8vw;
-        height: 3.733vw;
     }
 
     &:hover {

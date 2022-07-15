@@ -186,8 +186,8 @@
                     margin-bottom: 1.3888vw;
 
                     @media (min-width: 1441px) {
-                        max-width: 14.3749vw;
-                        margin-right: 1.25vw;
+                        max-width: 16vw;
+                        margin-right: 1.6666vw;
                     }
                     
                     @media (max-width: 500px) {
@@ -199,10 +199,16 @@
                 }
 
                 &-list {
+                    @media (min-width: 1441px) {
+                        width: 100%;
+                    }
                     & > *:last-child { margin-bottom: 0 }
                     p {
                         margin-bottom: 1.3888vw; 
-                        @media (min-width: 1441px) { margin-bottom: 0.83333vw }
+                        @media (min-width: 1441px) {
+                            margin-bottom: 1.25vw;
+                            max-width: 11.9791vw;
+                        }
                         @media (max-width: 500px) { margin-bottom: 4.2666vw }
                     }
                     ul {
